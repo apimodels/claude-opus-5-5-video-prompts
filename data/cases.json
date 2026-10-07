@@ -1,6 +1,6 @@
 {
   "source": "https://apimodels.app/claude-opus-5-5-video-prompts",
-  "updated": "2026-10-07",
+  "updated": "2026-10-08",
   "note": "Videos belong to their creators; this file links to original posts only.",
   "categories": [
     {
@@ -9,6 +9,7 @@
       "name_zh": "动效设计与 UI 动画",
       "cases": [
         {
+          "file": "cases/motion-graphics/01-the-15-second-motion-designer-showreel.md",
           "title_en": "The 15-second motion-designer showreel",
           "title_zh": "15 秒动效设计师简历 Showreel(一句话原型)",
           "author": "@stephanlivera",
@@ -52,6 +53,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/02-showreel-brief-that-lists-the-techniques.md",
           "title_en": "Showreel brief that lists the techniques",
           "title_zh": "加长版 Showreel 提示词(列出技术清单)",
           "author": "@lukasersil",
@@ -83,6 +85,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/03-one-shape-morphs-through-a-dozen-ui-states-on-the-beat.md",
           "title_en": "One shape morphs through a dozen UI states on the beat",
           "title_zh": "一个形状踩着节拍变遍 12 种 UI 状态(可复用 XML 模板)",
           "author": "@twoclipping",
@@ -120,6 +123,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/04-one-take-keynote-style-launch-film-with-liquid-glass-and-an.md",
           "title_en": "One-take keynote-style launch film with liquid glass and an iris transition",
           "title_zh": "一镜到底发布会风格品牌片(液态玻璃、光圈转场,5,200 字模板)",
           "author": "@twoclipping",
@@ -157,6 +161,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/05-minimal-product-launch-scanning-wall-of-vertical-clips-cut.md",
           "title_en": "Minimal product launch: scanning wall of vertical clips, cut on the beat",
           "title_zh": "极简高端产品片:竖屏素材扫描墙 + 卡点",
           "author": "@twoclipping",
@@ -200,6 +205,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/06-mobile-game-reward-and-gacha-reveal-three-js-toon-shading.md",
           "title_en": "Mobile-game reward and gacha reveal (Three.js toon shading + GSAP)",
           "title_zh": "手游「高光时刻」结算 / 抽卡动效(中文长模板)",
           "author": "@op7418",
@@ -237,6 +243,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/07-pixel-art-wizard-casting-a-spell-pure-canvas-code.md",
           "title_en": "Pixel-art wizard casting a spell, pure Canvas code",
           "title_zh": "纯代码像素风巫师施法循环动画",
           "author": "@majidmanzarpour",
@@ -274,6 +281,7 @@
           ]
         },
         {
+          "file": "cases/motion-graphics/08-colourful-remix-of-the-ui-morph-template-that-exposed-the.md",
           "title_en": "Colourful remix of the UI-morph template that exposed the default render pipeline",
           "title_zh": "同模板「更彩色」复现,揭示 Opus 默认渲染管线",
           "author": "@__morse",
@@ -318,6 +326,7 @@
       "name_zh": "产品宣传片",
       "cases": [
         {
+          "file": "cases/product-launch/09-punchy-launch-video-for-an-inference-startup-from-one-line.md",
           "title_en": "Punchy launch video for an inference startup, from one line",
           "title_zh": "推理创业公司发布片(一句话)",
           "author": "@deedydas",
@@ -349,6 +358,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/10-three-step-hyperframes-recipe-install-the-skill-reuse-the.md",
           "title_en": "Three-step HyperFrames recipe: install the skill, reuse the showreel line, point at your project",
           "title_zh": "HyperFrames 三步教程(葡语):装 skill + 爆款提示词 + 指向项目文件夹",
           "author": "@thayto_dev",
@@ -380,6 +390,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/11-reusable-30-second-business-explainer-template.md",
           "title_en": "Reusable 30-second business explainer template",
           "title_zh": "「给你的生意做 30 秒讲解片」通用模板",
           "author": "@alex_prompter",
@@ -411,6 +422,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/12-arabic-vertical-promo-for-an-ai-coding-tutor-app-remotion.md",
           "title_en": "Arabic vertical promo for an AI coding-tutor app (Remotion + TTS)",
           "title_zh": "阿拉伯语竖屏 App 推广片(Remotion + TTS 配音)",
           "author": "@YarHmm",
@@ -448,6 +460,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/13-kotlin-promo-generated-from-the-languages-website-with.md",
           "title_en": "Kotlin promo generated from the language's website with HyperFrames",
           "title_zh": "Kotlin 官方推广片(HyperFrames skill + 指向官网)",
           "author": "JetBrains",
@@ -485,6 +498,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/14-promo-animation-for-a-3d-printed-din-rail-enclosure-it.md",
           "title_en": "Promo animation for a 3D-printed DIN-rail enclosure it designed first",
           "title_zh": "3D 打印外壳产品动画(同一会话里先设计外壳再做宣传片)",
           "author": "@VectorCrossProd",
@@ -516,6 +530,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/15-notion-column-permissions-trailer-in-remotion-2-days-33.md",
           "title_en": "Notion column-permissions trailer in Remotion: 2 days, 33 versions",
           "title_zh": "Notion「列权限」功能预告片(Remotion,2 天 33 版)",
           "author": "@wustep",
@@ -565,6 +580,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/16-shotbase-launch-video-with-hyperframes-under-20-minutes.md",
           "title_en": "Shotbase launch video with HyperFrames, under 20 minutes",
           "title_zh": "Shotbase 剪辑 App 发布片(HyperFrames,20 分钟内)",
           "author": "@Miguel07Code",
@@ -590,6 +606,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/17-cosmos-moodboard-app-promo-two-prompts-in-hyperframes.md",
           "title_en": "Cosmos moodboard-app promo, two prompts in HyperFrames",
           "title_zh": "Cosmos 情绪板 App 宣传片(HyperFrames,2 条提示词)",
           "author": "@kaolti",
@@ -615,6 +632,7 @@
           ]
         },
         {
+          "file": "cases/product-launch/18-ux-case-study-animation-explaining-design-decisions.md",
           "title_en": "UX case-study animation explaining design decisions",
           "title_zh": "UX 设计决策讲解动画(面试作品集)",
           "author": "@moguzbulbul",
@@ -647,6 +665,7 @@
       "name_zh": "讲解与教育",
       "cases": [
         {
+          "file": "cases/explainer/19-manim-lesson-on-derivatives-with-edge-tts-narration.md",
           "title_en": "Manim lesson on derivatives with edge-tts narration",
           "title_zh": "Manim 导数概念教学片(edge-tts 配音)",
           "author": "@LinearUncle",
@@ -684,6 +703,7 @@
           ]
         },
         {
+          "file": "cases/explainer/20-12-minute-chinese-explainer-what-is-a-transformer-rendered.md",
           "title_en": "12-minute Chinese explainer \"What is a Transformer\", rendered in JS",
           "title_zh": "《什么是 Transformer》12 分钟中文讲解片(JS)",
           "author": "@dotey",
@@ -715,6 +735,7 @@
           ]
         },
         {
+          "file": "cases/explainer/21-epic-chronicle-of-chinese-civilization-frame-rendered-with.md",
           "title_en": "Epic chronicle of Chinese civilization, frame-rendered with FFmpeg",
           "title_zh": "《中华文明史》史诗编年片(逐帧渲染 + ffmpeg,五声调式配乐)",
           "author": "@dotey",
@@ -746,6 +767,7 @@
           ]
         },
         {
+          "file": "cases/explainer/22-explaining-recursion-in-nine-radically-different-video.md",
           "title_en": "Explaining recursion in nine radically different video styles",
           "title_zh": "用九种视频风格解释「递归」",
           "author": "@emollick",
@@ -777,6 +799,7 @@
           ]
         },
         {
+          "file": "cases/explainer/23-negroni-recipe-motion-graphic-from-a-single-photo.md",
           "title_en": "Negroni recipe motion graphic from a single photo",
           "title_zh": "从一张照片生成鸡尾酒配方动画",
           "author": "@Ror_Fly",
@@ -814,6 +837,7 @@
           ]
         },
         {
+          "file": "cases/explainer/24-interactive-raptor-3-rocket-engine-you-can-take-apart-screen.md",
           "title_en": "Interactive Raptor 3 rocket engine you can take apart (screen recording)",
           "title_zh": "可拆解的猛禽 3 火箭发动机(交互网页 → 录屏)",
           "author": "@konstantinsaifo",
@@ -845,6 +869,7 @@
           ]
         },
         {
+          "file": "cases/explainer/25-twin-paradox-explainer-in-japanese-paper-cutout-style-1-395.md",
           "title_en": "Twin-paradox explainer in Japanese, paper-cutout style, 1,395 Canvas frames",
           "title_zh": "双生子佯谬日文讲解(剪纸风,Canvas 1,395 帧)",
           "author": "@masahirochaen",
@@ -876,6 +901,7 @@
           ]
         },
         {
+          "file": "cases/explainer/26-3blue1brown-style-explainer-on-variational-autoencoders.md",
           "title_en": "3Blue1Brown-style explainer on variational autoencoders",
           "title_zh": "3Blue1Brown 风格 VAE 讲解(Manim + 真实训练 MNIST + 克隆配音)",
           "author": "@ng169onX",
@@ -901,6 +927,7 @@
           ]
         },
         {
+          "file": "cases/explainer/27-three-minute-history-of-ai-100-code-in-remotion.md",
           "title_en": "Three-minute history of AI, 100% code in Remotion",
           "title_zh": "3 分钟 AI 发展史(Remotion,约 7,400 行代码)",
           "author": "@kimmonismus",
@@ -932,6 +959,7 @@
           ]
         },
         {
+          "file": "cases/explainer/28-black-hole-lensing-lab-polished-by-reviewer-and-fixer-agents.md",
           "title_en": "Black-hole lensing lab polished by reviewer and fixer agents overnight",
           "title_zh": "引力透镜黑洞实验室(三轮多 agent 评审-修复,过夜跑)",
           "author": "@Voxyz_ai",
@@ -969,6 +997,7 @@
           ]
         },
         {
+          "file": "cases/explainer/29-4-6-billion-years-of-earths-evolution-bilibili.md",
           "title_en": "4.6 billion years of Earth's evolution (Bilibili)",
           "title_zh": "地球 46 亿年进化史(B 站)",
           "author": "第十一次元",
@@ -994,6 +1023,7 @@
           ]
         },
         {
+          "file": "cases/explainer/30-the-beauty-of-group-theory-promo-film-bilibili.md",
           "title_en": "\"The Beauty of Group Theory\" promo film (Bilibili)",
           "title_zh": "群论之美宣传片(B 站)",
           "author": "sadssxa",
@@ -1026,6 +1056,7 @@
       "name_zh": "分镜调视频模型",
       "cases": [
         {
+          "file": "cases/storyboard-to-video/31-infinite-zoom-through-vintage-collage-worlds-generated.md",
           "title_en": "Infinite zoom through vintage collage worlds, generated assets composited in code",
           "title_zh": "复古拼贴「无限缩放」(调多个生成模型出素材 + 代码合成)",
           "author": "@koldo2k",
@@ -1063,6 +1094,7 @@
           ]
         },
         {
+          "file": "cases/storyboard-to-video/32-short-film-made-through-the-krea-mcp-in-10-minutes-for-8.md",
           "title_en": "Short film made through the Krea MCP in 10 minutes for $8",
           "title_zh": "通过 Krea MCP 一次出片(10 分钟、$8)",
           "author": "@angrypenguinPNG",
@@ -1094,6 +1126,7 @@
           ]
         },
         {
+          "file": "cases/storyboard-to-video/33-japanese-vertical-review-short-opus-diagrams-tts-voice.md",
           "title_en": "Japanese vertical review short: Opus diagrams, TTS voice, Seedance 2.5 opening",
           "title_zh": "日文竖屏评测短视频:Opus 图解动画 + TTS 配音 + Seedance 2.5 开场",
           "author": "@masahirochaen",
@@ -1119,6 +1152,7 @@
           ]
         },
         {
+          "file": "cases/storyboard-to-video/34-eight-stage-siege-game-in-2-hours-then-a-60-second-trailer.md",
           "title_en": "Eight-stage siege game in 2 hours, then a 60-second trailer from video models",
           "title_zh": "2 小时做完 8 关攻城游戏 + 60 秒宣传片(Seedance 2.5 / MiniMax H3 + CapCut)",
           "author": "@KanaWorks_AI",
@@ -1151,6 +1185,7 @@
       "name_zh": "MV",
       "cases": [
         {
+          "file": "cases/music-video/35-claude-pop-music-video-a-dictated-brief-and-a-12-hour.md",
           "title_en": "\"Claude Pop\" music video: a dictated brief and a 12-hour autonomous run",
           "title_zh": "「Claude Pop」过夜 12 小时 MV(语音口述长 brief,视频模型打底 + JS 重绘)",
           "author": "@donaldjewkes",
@@ -1200,6 +1235,7 @@
           ]
         },
         {
+          "file": "cases/music-video/36-1990s-demoscene-demo-in-c-c-and-opengl-synced-to-an-s3m.md",
           "title_en": "1990s demoscene demo in C/C++ and OpenGL, synced to an S3M track",
           "title_zh": "90 年代 Demoscene(C/C++ + OpenGL,配 S3M 音轨,单提示词)",
           "author": "@gandamu_ml",
@@ -1237,6 +1273,7 @@
           ]
         },
         {
+          "file": "cases/music-video/37-im-upping-my-p-doom-music-video-painted-with-p5-brush-and.md",
           "title_en": "\"I'm Upping My P(Doom)\" music video painted with p5.brush and parallel subagents",
           "title_zh": "「I'm Upping My P(Doom)」MV(p5.js + p5.brush,并行子 agent)",
           "author": "@other__reality",
@@ -1286,6 +1323,7 @@
           ]
         },
         {
+          "file": "cases/music-video/38-the-same-brief-re-run-with-midjourney-and-a-moodboard.md",
           "title_en": "The same brief re-run with Midjourney and a moodboard",
           "title_zh": "同一 brief + Midjourney + 情绪板重跑(本页浏览量最高)",
           "author": "@anabology",
@@ -1317,6 +1355,7 @@
           ]
         },
         {
+          "file": "cases/music-video/39-stroke-of-a-pen-bitcoin-music-video-storyboarded-by-an-agent.md",
           "title_en": "\"Stroke of a Pen\" Bitcoin music video storyboarded by an agent swarm",
           "title_zh": "比特币货币史 MV「Stroke of a Pen」(agent 群分镜,约 75 个卡点镜头)",
           "author": "@bradmillscan",
@@ -1354,6 +1393,7 @@
           ]
         },
         {
+          "file": "cases/music-video/40-mid-autumn-paper-collage-short-p5-brush-frames-over.md",
           "title_en": "Mid-Autumn paper-collage short: p5.brush frames over generated backdrops",
           "title_zh": "中秋剪纸拼贴短片(p5.brush 逐帧 + Nano Banana Pro 出底稿)",
           "author": "@ring_hyacinth",
@@ -1385,6 +1425,7 @@
           ]
         },
         {
+          "file": "cases/music-video/41-suno-sung-song-with-lyrics-and-mv-by-opus-5-5-bilibili.md",
           "title_en": "Suno-sung song with lyrics and MV by Opus 5.5 (Bilibili)",
           "title_zh": "Suno 编曲演唱 + Opus 5.5 作词并做 MV(B 站)",
           "author": "syline",
@@ -1417,6 +1458,7 @@
       "name_zh": "叙事与历史短片",
       "cases": [
         {
+          "file": "cases/short-film/42-two-minute-sand-animation-of-250-years-of-u-s-history.md",
           "title_en": "Two-minute sand animation of 250 years of U.S. history",
           "title_zh": "美国 250 年历史沙画动画(一句话,含配乐音效)",
           "author": "@Michaelzsguo",
@@ -1448,6 +1490,7 @@
           ]
         },
         {
+          "file": "cases/short-film/43-pelican-riding-a-bicycle-theatrical-cut-with-a-custom-gpu.md",
           "title_en": "Pelican riding a bicycle, theatrical cut with a custom GPU ray-marcher",
           "title_zh": "「鹈鹕骑自行车」剧场版(自写 GPU 光线步进渲染器)",
           "author": "@AxtonLiu",
@@ -1491,6 +1534,7 @@
           ]
         },
         {
+          "file": "cases/short-film/44-tengwang-pavilion-on-mid-autumn-night-one-webgl2-shader.md",
           "title_en": "Tengwang Pavilion on Mid-Autumn night, one WebGL2 shader (topic chosen by the model)",
           "title_zh": "滕王阁·中秋夜(自由选题,WebGL2 逐像素 + Karplus-Strong 古筝)",
           "author": "@DemitiyaGeekzen",
@@ -1522,6 +1566,7 @@
           ]
         },
         {
+          "file": "cases/short-film/45-porco-rosso-style-sunset-dogfight-recreated-in-three-js-from.md",
           "title_en": "Porco Rosso-style sunset dogfight recreated in Three.js, from one line",
           "title_zh": "用 Web3D 复刻《红猪》日落空战(一句话)",
           "author": "@NFT_Chen",
@@ -1559,6 +1604,7 @@
           ]
         },
         {
+          "file": "cases/short-film/46-austerlitz-2-december-1805-a-five-minute-film-made-entirely.md",
           "title_en": "Austerlitz, 2 December 1805: a five-minute film made entirely in code",
           "title_zh": "奥斯特里茨战役 5 分钟历史片(WebGL2,真实地形与日出方位)",
           "author": "@WinterArc2125",
@@ -1602,6 +1648,7 @@
           ]
         },
         {
+          "file": "cases/short-film/47-low-poly-3d-retelling-of-the-taoist-of-laoshan.md",
           "title_en": "Low-poly 3D retelling of \"The Taoist of Laoshan\"",
           "title_zh": "《崂山道士》3D 讲解片(不写分镜,声音克隆旁白)",
           "author": "@wshuyi",
@@ -1633,6 +1680,7 @@
           ]
         },
         {
+          "file": "cases/short-film/48-slumped-on-a-bench-watching-the-blast-meme-turned-into-a.md",
           "title_en": "\"Slumped on a bench, watching the blast\" meme turned into a shader animation (Bilibili)",
           "title_zh": "「瘫坐长椅看原子弹爆炸」动画(B 站,跑 16 小时、每个画面一个着色器)",
           "author": "一起Vibe",
@@ -1671,6 +1719,7 @@
       "name_zh": "3D、Blender 与着色器",
       "cases": [
         {
+          "file": "cases/3d-blender/49-market-street-san-francisco-the-afternoon-before-the-1906.md",
           "title_en": "Market Street, San Francisco, the afternoon before the 1906 earthquake, in Blender",
           "title_zh": "1906 年地震前的旧金山市场街(Blender Python,先建史料表再建模)",
           "author": "@alexalbert__",
@@ -1708,6 +1757,7 @@
           ]
         },
         {
+          "file": "cases/3d-blender/50-same-procedural-blender-shot-opus-5-5-vs-gpt-6-astra.md",
           "title_en": "Same procedural Blender shot: Opus 5.5 vs GPT-6 Astra",
           "title_zh": "Blender 程序化 10 秒镜头:Opus 5.5 vs GPT-6 Astra 对比",
           "author": "@Stefan_3D_AI",
@@ -1739,6 +1789,7 @@
           ]
         },
         {
+          "file": "cases/3d-blender/51-octopus-modelled-textured-rigged-and-animated-in-blender-in.md",
           "title_en": "Octopus modelled, textured, rigged and animated in Blender in about 2 hours (YouTube)",
           "title_zh": "Blender 里约 2 小时从零做章鱼(建模、贴图、绑定、动画,YouTube)",
           "author": "Bad Decisions Studio",
@@ -1764,6 +1815,7 @@
           ]
         },
         {
+          "file": "cases/3d-blender/52-gpu-fluid-simulated-campfire-film-in-javascript-self.md",
           "title_en": "GPU fluid-simulated campfire film in JavaScript, self-critiqued about 40 times",
           "title_zh": "只用 JavaScript 的 GPU 流体火焰短片(自评约 40 轮)",
           "author": "@NathanWilbanks_",
@@ -1795,6 +1847,7 @@
           ]
         },
         {
+          "file": "cases/3d-blender/53-hand-scribbled-opus5-turned-into-a-3d-boxing-animation.md",
           "title_en": "Hand-scribbled \"Opus5\" turned into a 3D boxing animation, packaged as a skill",
           "title_zh": "「Opus5」随手涂鸦变 3D 拳击动画,并封装成 Skill",
           "author": "@MinLiBuilds",
@@ -1832,6 +1885,7 @@
           ]
         },
         {
+          "file": "cases/3d-blender/54-windmill-modelled-rigged-textured-and-animated-in-blender.md",
           "title_en": "Windmill modelled, rigged, textured and animated in Blender via MCP in 15 minutes",
           "title_zh": "风车建模-绑定-贴图-动画全流程(Blender + Higgsfield MCP,15 分钟)",
           "author": "Higgsfield",
@@ -1876,6 +1930,7 @@
       "name_zh": "剪辑与后期",
       "cases": [
         {
+          "file": "cases/video-editing/55-raw-talking-head-clip-cut-into-a-punchy-captioned-edit.md",
           "title_en": "Raw talking-head clip cut into a punchy captioned edit",
           "title_zh": "口播原片剪成带字幕、图形、音乐的快节奏短视频(OpenEdit)",
           "author": "@sab8a",
@@ -1907,6 +1962,7 @@
           ]
         },
         {
+          "file": "cases/video-editing/56-opus-5-5-driving-after-effects-to-post-process-generated.md",
           "title_en": "Opus 5.5 driving After Effects to post-process generated clips (two tests)",
           "title_zh": "让 Opus 5.5 操作 After Effects 加工 AI 视频(两次测试)",
           "author": "@aicreataro",
@@ -1944,6 +2000,7 @@
           ]
         },
         {
+          "file": "cases/video-editing/57-a-full-youtube-video-edited-by-opus-5-5-through-a-davinci.md",
           "title_en": "A full YouTube video edited by Opus 5.5 through a DaVinci Resolve MCP",
           "title_zh": "让 Opus 5.5 通过 MCP 驱动 DaVinci Resolve 剪完整条 YouTube 视频",
           "author": "@NickSpisak_",
@@ -1969,6 +2026,7 @@
           ]
         },
         {
+          "file": "cases/video-editing/58-grok-generated-dance-clip-recut-and-packaged-by-opus-5-5.md",
           "title_en": "Grok-generated dance clip recut and packaged by Opus 5.5",
           "title_zh": "Grok 生成的原始舞蹈片段 → Opus 5.5 剪辑包装",
           "author": "@Gorden_Sun",
@@ -1994,6 +2052,7 @@
           ]
         },
         {
+          "file": "cases/video-editing/59-opus-played-its-own-game-and-cut-the-best-moments-into-a.md",
           "title_en": "Opus played its own game and cut the best moments into a demo reel",
           "title_zh": "游戏试玩演示片:Opus 自己玩游戏、挑高光、剪辑成片",
           "author": "@rehan_shei",
@@ -2025,6 +2084,7 @@
           ]
         },
         {
+          "file": "cases/video-editing/60-demo-reel-for-a-110k-rigid-body-webgpu-physics-solver.md",
           "title_en": "Demo reel for a 110K-rigid-body WebGPU physics solver",
           "title_zh": "11 万刚体 WebGPU 物理演示的宣传短片(一条提示词剪出)",
           "author": "@nybobs",
