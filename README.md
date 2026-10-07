@@ -12,14 +12,14 @@ Claude Opus 5.5 (model id claude-opus-5-5, released by Anthropic on 22 September
 
 ## Contents
 
-- [Motion Design & UI Animation](#motion-design-ui-animation) (8)
+- [Motion Design & UI Animation](#motion-design--ui-animation) (8)
 - [Product Launch](#product-launch) (10)
-- [Explainer & Education](#explainer-education) (12)
+- [Explainer & Education](#explainer--education) (12)
 - [Directing Video Models](#directing-video-models) (4)
 - [Music Video](#music-video) (7)
-- [Narrative & History Short](#narrative-history-short) (7)
-- [3D, Blender & Shader](#3d-blender-shader) (6)
-- [Editing & Post-Production](#editing-post-production) (6)
+- [Narrative & History Short](#narrative--history-short) (7)
+- [3D, Blender & Shader](#3d-blender--shader) (6)
+- [Editing & Post-Production](#editing--post-production) (6)
 - [What the best briefs do](#what-the-best-briefs-do)
 - [Six workflows with templates](METHODS.md)
 - [Our own run: prompt, render script, cost](our-run/README.md)
