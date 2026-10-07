@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>APIMODELS — 12s promo</title>
+<style>
+  html, body { margin: 0; padding: 0; background: #000; height: 100%; overflow: hidden; }
+  canvas { display: block; background: #000; }
+</style>
+</head>
+<body>
+<canvas id="frame" width="1280" height="720"></canvas>
+<script>
+/* ============================================================================
+   APIMODELS — 12 s promo.  120 BPM => one beat every 0.5 s, 24 beats total.
+
+   BEAT PLAN
+     beat  time  event
+       0   0.00  chaos begins — label group 1 flies in from all sides
+       1   0.50  label group 2 flies in
+       2   1.00  label group 3 flies in
+       3   1.50  label group 4 flies in
+       4   2.00  label group 5 flies in
+       5   2.50  label group 6 flies in — maximum clutter
+       6   3.00  SNAP: all 24 labels collapse toward the centre + impact flash
+       7   3.50  one glowing key has materialised at centre
+       8   4.00  key settles
+       9   4.50  key pulse — connector lines fan out toward the model grid
+      10   5.00  card 1 lights  "145 models"
+      11   5.50  card 2 lights  "image"
+      12   6.00  card 3 lights  "video"
+      13   6.50  card 4 lights  "LLM"
+      14   7.00  card 5 lights  "audio"
+      15   7.50  card 6 lights  "one endpoint" — full grid lit and glowing
+      16   8.00  grid glow breathes
+      17   8.50  grid glow breathes (last motion of the grid)
+      18   9.00  CUT to end card — scene fades out, "APIMODELS" enters + flash
+      19   9.50  rule sweep + "One key. Every model." enters
+      20  10.00  "apimodels.app" enters — end card fully settled
+      21  10.50  nothing left to animate
+      22  11.00  frozen hold begins
+      23  11.50  still held through to 12.00
+   ========================================================================= */
+
+(function () {
+  'use strict';
+
+  var W = 1280, H = 720;
+  window.DURATION = 12;
+  window.FPS = 30;
+
+  var canvas = document.getElementById('frame');
+  var ctx = canvas.getContext('2d');
+
+  var FONT = 'system-ui, -apple-system, "Segoe UI", Roboto, sans-serif';
+  var ACCENT = '124, 92, 255';   // #7c5cff
+
+  /* ------------------------------- helpers ------------------------------- */
+
+  function clamp01(v) { return v < 0 ? 0 : (v > 1 ? 1 : v); }
+  function lerp(a, b, p) { return a + (b - a) * p; }
+  function seg(t, a, b) { return clamp01((t - a) / (b - a)); }
+
+  function easeOutCubic(p) { return 1 - Math.pow(1 - p, 3); }
+  function easeInOutQuad(p) { return p < 0.5 ? 2 * p * p : 1 - Math.pow(-2 * p + 2, 2) / 2; }
+  function easeOutBack(p) {
+    var s = 1.55, q = p - 1;
+    return 1 + (s + 1) * q * q * q + s * q * q;
+  }
+
+  function mulberry32(a) {
+    return function () {
+      a |= 0; a = (a + 0x6D2B79F5) | 0;
+      var t = Math.imul(a ^ (a >>> 15), 1 | a);
+      t = (t + Math.imul(t ^ (t >>> 7), 61 | t)) ^ t;
+      return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+    };
+  }
+
+  function roundRect(x, y, w, h, r) {
+    ctx.beginPath();
+    ctx.moveTo(x + r, y);
+    ctx.arcTo(x + w, y, x + w, y + h, r);
+    ctx.arcTo(x + w, y + h, x, y + h, r);
+    ctx.arcTo(x, y + h, x, y, r);
+    ctx.arcTo(x, y, x + w, y, r);
+    ctx.closePath();
+  }
+
+  function drawSpaced(text, cx, y, spacing) {
+    var i, ws = [], total = 0;
+    ctx.save();
+    ctx.textAlign = 'left';
+    for (i = 0; i < text.length; i++) {
+      var w = ctx.measureText(text.charAt(i)).width;
+      ws.push(w);
+      total += w;
+    }
+    total += spacing * (text.length - 1);
+    var x = cx - total / 2;
+    for (i = 0; i < text.length; i++) {
+      ctx.fillText(text.charAt(i), x, y);
+      x += ws[i] + spacing;
+    }
+    ctx.restore();
+  }
+
+  function nearestOnRect(px, py, rx, ry, rw, rh) {
+    return [
+      Math.max(rx, Math.min(px, rx + rw)),
+      Math.max(ry, Math.min(py, ry + rh))
+    ];
+  }
+
+  /* ------------------------------ the content ---------------------------- */
+
+  var LABEL_TEXTS = [
+    'image', 'video', 'LLM', 'audio',
+    'key_1', 'key_2', 'key_3', 'sdk',
+    'token', 'oauth', 'webhook', 'vision',
+    'embeddings', 'tts', 'stt', 'rate-limit',
+    'billing', 'quota', 'rest', 'grpc',
+    'keys.json', 'api_key', '/v1/chat', 'SDK v3'
+  ];
+
+  var rng = mulberry32(20240521);
+
+  ctx.font = '600 22px ' + FONT;
+
+  var CHAOS = LABEL_TEXTS.map(function (txt, i) {
+    var ang = rng() * Math.PI * 2;
+    var dist = 720 + rng() * 520;
+    var filled = txt.indexOf('key') === 0;
+    return {
+      txt: txt,
+      filled: filled,
+      w: ctx.measureText(txt).width + 38,
+      h: 46,
+      sx: 640 + Math.cos(ang) * dist,
+      sy: 360 + Math.sin(ang) * dist,
+      tx: 640 + (rng() - 0.5) * 780,
+      ty: 360 + (rng() - 0.5) * 470,
+      rot: (rng() - 0.5) * 0.55,
+      scale: 0.78 + rng() * 0.55,
+      depth: 0.35 + rng() * 0.65,
+      entry: Math.floor(i / 4) * 0.5
+    };
+  });
+
+  var CW = 248, CH = 112;
+  var CARDS = [
+    { txt: '145 models',   cx: 300, cy: 222, strong: true  },
+    { txt: 'image',        cx: 640, cy: 222, strong: false },
+    { txt: 'video',        cx: 980, cy: 222, strong: false },
+    { txt: 'LLM',          cx: 300, cy: 498, strong: false },
+    { txt: 'audio',        cx: 640, cy: 498, strong: false },
+    { txt: 'one endpoint', cx: 980, cy: 498, strong: false }
+  ];
+
+  var KEY_SHAFT_TIP = 80;
+
+  /* ------------------------------- scenography --------------------------- */
+
+  function drawBackdrop(t) {
+    var tt = Math.min(t, 11.0);
+
+    var g = ctx.createRadialGradient(640, 360, 40, 640, 360, 780);
+    g.addColorStop(0, '#131024');
+    g.addColorStop(0.55, '#0a0913');
+    g.addColorStop(1, '#050508');
+    ctx.fillStyle = g;
+    ctx.fillRect(0, 0, W, H);
+
+    ctx.save();
+    ctx.strokeStyle = 'rgba(' + ACCENT + ',0.055)';
+    ctx.lineWidth = 1;
+    var off = (tt * 8) % 64;
+    for (var x = -64 + off; x < W + 64; x += 64) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+    }
+    for (var y = -64 + off; y < H + 64; y += 64) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
+    ctx.restore();
+
+    var v = ctx.createRadialGradient(640, 360, 220, 640, 360, 830);
+    v.addColorStop(0, 'rgba(0,0,0,0)');
+    v.addColorStop(1, 'rgba(0,0,0,0.74)');
+    ctx.fillStyle = v;
+    ctx.fillRect(0, 0, W, H);
+  }
+
+  /* Phase 1 — 0.0 → 3.8 s : the cluttered screen */
+  function drawChaos(t) {
+    if (t >= 3.8) return;
+
+    var collapse = easeInOutQuad(seg(t, 3.0, 3.8));
+
+    for (var i = 0; i < CHAOS.length; i++) {
+      var c = CHAOS[i];
+      var p = clamp01((t - c.entry) / 0.5);
+      if (p <= 0) continue;
+
+      var e = easeOutCubic(p);
+
+      var live = Math.min(1, (t - c.entry) * 2);
+      var wobX = Math.sin(t * 3.0 + i * 1.9) * 26 * live;
+      var wobY = Math.cos(t * 2.4 + i * 2.7) * 18 * live;
+
+      var x = lerp(c.sx, c.tx, e) + wobX;
+      var y = lerp(c.sy, c.ty, e) + wobY;
+      var rot = c.rot + (t - c.entry) * 0.45;
+      var s = c.scale * (0.85 + 0.15 * e);
+      var a = e;
+
+      if (collapse > 0) {
+        x = lerp(x, 640, collapse);
+        y = lerp(y, 360, collapse);
+        rot += collapse * 2.6;
+        s *= (1 - collapse * 0.85);
+        a *= (1 - collapse);
+      }
+      if (a <= 0.01) continue;
+
+      var blur = (1 - c.depth) * 1.6;
+
+      ctx.save();
+      ctx.translate(x, y);
+      ctx.rotate(rot);
+      ctx.scale(s, s);
+      ctx.globalAlpha = a;
+      if (blur > 0.3) ctx.filter = 'blur(' + blur.toFixed(2) + 'px)';
+
+      roundRect(-c.w / 2, -c.h / 2, c.w, c.h, c.h / 2);
+      if (c.filled) {
+        ctx.fillStyle = 'rgba(' + ACCENT + ',0.88)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(255,255,255,0.6)';
+      } else {
+        ctx.fillStyle = 'rgba(' + ACCENT + ',0.11)';
+        ctx.fill();
+        ctx.strokeStyle = 'rgba(' + ACCENT + ',0.68)';
+      }
+      ctx.lineWidth = 2;
+      ctx.stroke();
+
+      ctx.filter = 'none';
+      ctx.fillStyle = c.filled ? '#ffffff' : 'rgba(233,229,255,0.93)';
+      ctx.font = '600 22px ' + FONT;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(c.txt, 0, 1);
+      ctx.restore();
+    }
+  }
+
+  /* Phase 3 — 4.5 s onward : lines fanning out from the key */
+  function drawLines(t) {
+    var fade = 1 - easeInOutQuad(seg(t, 9.0, 9.4));
+    if (fade <= 0) return;
+
+    for (var i = 0; i < CARDS.length; i++) {
+      var c = CARDS[i];
+      var p = seg(t, 4.5 + i * 0.5, 4.85 + i * 0.5);
+      if (p <= 0) continue;
+
+      var e = easeOutCubic(p);
+      var a = nearestOnRect(640, 360, c.cx - CW / 2, c.cy - CH / 2, CW, CH);
+      var ex = lerp(640, a[0], e);
+      var ey = lerp(360, a[1], e);
+
+      var grad = ctx.createLinearGradient(640, 360, a[0], a[1]);
+      grad.addColorStop(0, 'rgba(' + ACCENT + ',0)');
+      grad.addColorStop(0.3, 'rgba(' + ACCENT + ',0.55)');
+      grad.addColorStop(1, 'rgba(196,182,255,0.95)');
+
+      ctx.save();
+      ctx.globalAlpha = fade;
+      ctx.strokeStyle = grad;
+      ctx.lineWidth = 2.5;
+      ctx.lineCap = 'round';
+      ctx.shadowColor = 'rgba(' + ACCENT + ',0.9)';
+      ctx.shadowBlur = 12;
+      ctx.beginPath();
+      ctx.moveTo(640, 360);
+      ctx.lineTo(ex, ey);
+      ctx.stroke();
+
+      if (p < 1) {
+        ctx.shadowBlur = 18;
+        ctx.fillStyle = '#ffffff';
+        ctx.beginPath();
+        ctx.arc(ex, ey, 3.6, 0, Math.PI * 2);
+        ctx.fill();
+      }
+      ctx.restore();
+    }
+  }
+
+  /* Phase 2/4 — the single glowing key */
+  function drawKey(t) {
+    var fade = 1 - easeInOutQuad(seg(t, 9.0, 9.4));
+    var app = seg(t, 3.15, 3.65);
+    if (app <= 0 || fade <= 0) return;
+
+    var bump = 0;
+    for (var b = 4.5; b <= 7.5 + 1e-6; b += 0.5) {
+      var d = t - b;
+      if (d >= 0 && d < 0.4) bump = Math.max(bump, Math.exp(-d * 10));
+    }
+
+    var sc = easeOutBack(app) * (1 + bump * 0.16);
+    var alpha = Math.min(1, app * 1.8) * fade;
+
+    ctx.save();
+    ctx.translate(640, 360);
+    ctx.scale(1.45 * sc, 1.45 * sc);
+    ctx.globalAlpha = alpha;
+
+    var R = 250;
+    var g = ctx.createRadialGradient(0, 0, 0, 0, 0, R);
+    g.addColorStop(0, 'rgba(' + ACCENT + ',' + (0.46 * (1 + bump * 0.5)).toFixed(3) + ')');
+    g.addColorStop(0.35, 'rgba(' + ACCENT + ',0.16)');
+    g.addColorStop(1, 'rgba(' + ACCENT + ',0)');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(0, 0, R, 0, Math.PI * 2);
+    ctx.fill();
+
+    ctx.lineCap = 'round';
+    ctx.lineJoin = 'round';
+    ctx.shadowColor = 'rgba(' + ACCENT + ',1)';
+    ctx.shadowBlur = 28;
+    ctx.strokeStyle = '#f3efff';
+    ctx.lineWidth = 13;
+
+    ctx.beginPath();
+    ctx.arc(-46, 0, 28, 0, Math.PI * 2);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(-18, 0);
+    ctx.lineTo(KEY_SHAFT_TIP, 0);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(52, 4);
+    ctx.lineTo(52, 27);
+    ctx.stroke();
+
+    ctx.beginPath();
+    ctx.moveTo(74, 4);
+    ctx.lineTo(74, 21);
+    ctx.stroke();
+
+    ctx.restore();
+  }
+
+  /* Phase 4 — the model-card grid */
+  function drawCards(t) {
+    var fade = 1 - easeInOutQuad(seg(t, 9.0, 9.4));
+    if (fade <= 0) return;
+
+    var breathe = 1 + 0.22 * Math.sin((t - 7.5) * Math.PI * 2 * 0.5) * seg(t, 7.5, 8.0);
+
+    for (var i = 0; i < CARDS.length; i++) {
+      var c = CARDS[i];
+      var lit = seg(t, 5.0 + i * 0.5, 5.45 + i * 0.5);
+      if (lit <= 0) continue;
+
+      var s = 1 + (easeOutBack(lit) - 1) * 0.45;
+      var alpha = fade * Math.min(1, lit * 2.2);
+
+      ctx.save();
+      ctx.translate(c.cx, c.cy);
+      ctx.scale(s, s);
+      ctx.globalAlpha = alpha;
+
+      roundRect(-CW / 2, -CH / 2, CW, CH, 18);
+
+      var g = ctx.createLinearGradient(0, -CH / 2, 0, CH / 2);
+      if (c.strong) {
+        g.addColorStop(0, 'rgba(' + ACCENT + ',0.42)');
+        g.addColorStop(1, 'rgba(' + ACCENT + ',0.20)');
+      } else {
+        g.addColorStop(0, 'rgba(' + ACCENT + ',0.20)');
+        g.addColorStop(1, 'rgba(' + ACCENT + ',0.07)');
+      }
+      ctx.fillStyle = g;
+      ctx.fill();
+
+      ctx.strokeStyle = c.strong ? 'rgba(214,203,255,0.95)' : 'rgba(180,160,255,0.82)';
+      ctx.lineWidth = 2;
+      ctx.shadowColor = 'rgba(' + ACCENT + ',0.8)';
+      ctx.shadowBlur = 22 * breathe * lit;
+      ctx.stroke();
+      ctx.shadowBlur = 0;
+
+      ctx.fillStyle = '#ffffff';
+      ctx.font = '600 27px ' + FONT;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText(c.txt, 0, 1);
+
+      ctx.restore();
+    }
+  }
+
+  /* Phase 5 — the end card */
+  function drawEndCard(t) {
+    var p0 = seg(t, 9.0, 9.5);
+    if (p0 <= 0) return;
+
+    var e0 = easeOutCubic(p0);
+    var e1 = easeOutCubic(seg(t, 9.5, 10.0));
+    var e2 = easeOutCubic(seg(t, 10.0, 10.5));
+
+    // ambient glow behind the wordmark
+    ctx.save();
+    ctx.globalAlpha = e0 * 0.9;
+    var g = ctx.createRadialGradient(640, 310, 20, 640, 310, 540);
+    g.addColorStop(0, 'rgba(' + ACCENT + ',0.22)');
+    g.addColorStop(0.5, 'rgba(' + ACCENT + ',0.07)');
+    g.addColorStop(1, 'rgba(' + ACCENT + ',0)');
+    ctx.fillStyle = g;
+    ctx.beginPath();
+    ctx.arc(640, 310, 540, 0, Math.PI * 2);
+    ctx.fill();
+    ctx.restore();
+
+    // wordmark
+    ctx.save();
+    ctx.globalAlpha = e0;
+    ctx.translate(0, (1 - e0) * 26);
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'left';
+    ctx.font = '800 104px ' + FONT;
+    ctx.fillStyle = '#ffffff';
+    ctx.shadowColor = 'rgba(' + ACCENT + ',0.9)';
+    ctx.shadowBlur = 34;
+    drawSpaced('APIMODELS', 640, 296, 7);
+    ctx.restore();
+
+    // rule sweep
+    if (e1 > 0) {
+      var rw = 440 * e1;
+      var grad = ctx.createLinearGradient(640 - rw / 2, 0, 640 + rw / 2, 0);
+      grad.addColorStop(0, 'rgba(' + ACCENT + ',0)');
+      grad.addColorStop(0.5, 'rgba(' + ACCENT + ',0.95)');
+      grad.addColorStop(1, 'rgba(' + ACCENT + ',0)');
+      ctx.save();
+      ctx.globalAlpha = e0;
+      ctx.fillStyle = grad;
+      ctx.fillRect(640 - rw / 2, 356, rw, 3);
+      ctx.restore();
+    }
+
+    // tagline
+    if (e1 > 0) {
+      ctx.save();
+      ctx.globalAlpha = e1;
+      ctx.translate(0, (1 - e1) * 16);
+      ctx.fillStyle = 'rgba(240,238,255,0.84)';
+      ctx.font = '500 36px ' + FONT;
+      ctx.textAlign = 'center';
+      ctx.textBaseline = 'middle';
+      ctx.fillText('One key. Every model.', 640, 414);
+      ctx.restore();
+    }
+
+    // url
+    if (e2 > 0) {
+      ctx.save();
+      ctx.globalAlpha = e2;
+      ctx.translate(0, (1 - e2) * 12);
+      ctx.fillStyle = 'rgba(170,148,255,1)';
+      ctx.font = '500 22px ' + FONT;
+      ctx.textAlign = 'left';
+      ctx.textBaseline = 'middle';
+      ctx.shadowColor = 'rgba(' + ACCENT + ',0.7)';
+      ctx.shadowBlur = 14;
+      drawSpaced('apimodels.app', 640, 496, 2);
+      ctx.restore();
+    }
+  }
+
+  /* Impact flashes, on the two hardest beats: 3.00 s (snap) and 9.00 s (cut) */
+  function drawFlash(t) {
+    var a = 0;
+    var d1 = t - 3.0, d2 = t - 9.0;
+    if (d1 >= 0) a = Math.max(a, Math.exp(-d1 * 11) * 0.15);
+    if (d2 >= 0) a = Math.max(a, Math.exp(-d2 * 11) * 0.13);
+    if (a <= 0.003) return;
+
+    ctx.save();
+    ctx.globalAlpha = a;
+    ctx.fillStyle = '#cebcff';
+    ctx.fillRect(0, 0, W, H);
+    ctx.restore();
+  }
+
+  /* ------------------------------ the frame ------------------------------ */
+
+  function renderFrame(t) {
+    if (!(t >= 0)) t = 0;
+
+    ctx.setTransform(1, 0, 0, 1, 0, 0);
+    ctx.globalAlpha = 1;
+    ctx.filter = 'none';
+    ctx.shadowBlur = 0;
+    ctx.shadowColor = 'transparent';
+    ctx.lineWidth = 1;
+
+    ctx.fillStyle = '#000000';
+    ctx.fillRect(0, 0, W, H);
+
+    drawBackdrop(t);
+    drawChaos(t);
+    drawLines(t);
+    drawKey(t);
+    drawCards(t);
+    drawEndCard(t);
+    drawFlash(t);
+
+    ctx.filter = 'none';
+    ctx.globalAlpha = 1;
+    ctx.shadowBlur = 0;
+  }
+
+  window.renderFrame = renderFrame;
+
+  /* --------------------------- preview playback -------------------------- */
+
+  var t0 = null;
+  function loop(ts) {
+    if (t0 === null) t0 = ts;
+    var t = ((ts - t0) / 1000) % window.DURATION;
+    renderFrame(t);
+    requestAnimationFrame(loop);
+  }
+  requestAnimationFrame(loop);
+})();
+</script>
+</body>
+</html>

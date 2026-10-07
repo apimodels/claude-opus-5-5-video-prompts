@@ -1,0 +1,2061 @@
+{
+  "source": "https://apimodels.app/claude-opus-5-5-video-prompts",
+  "updated": "2026-10-07",
+  "note": "Videos belong to their creators; this file links to original posts only.",
+  "categories": [
+    {
+      "category": "motion-graphics",
+      "name_en": "Motion Design & UI Animation",
+      "name_zh": "动效设计与 UI 动画",
+      "cases": [
+        {
+          "title_en": "The 15-second motion-designer showreel",
+          "title_zh": "15 秒动效设计师简历 Showreel(一句话原型)",
+          "author": "@stephanlivera",
+          "author_url": "https://x.com/stephanlivera",
+          "source_url": "https://x.com/stephanlivera/status/2103315922098470926",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 on Max effort\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖写明「Opus 5.5 on Max effort」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "One sentence at max effort. Indexers describe the result as Canvas drawing cut to a 128 BPM grid; the usual route is one HTML file rendered frame by frame by a headless browser, then FFmpeg.",
+              "label_zh": "工具链与做法",
+              "text_zh": "一句话、max effort。整理站描述成片为 Canvas 绘制、按 128 BPM 卡点;常见渲染路线是单 HTML + 无头浏览器逐帧 + FFmpeg。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "15 s, 1920x1080, about 2.25M views (6 Oct 2026).",
+              "label_zh": "成片规格",
+              "text_zh": "15 秒,1920x1080,约 225 万浏览(2026-10-06)。"
+            },
+            {
+              "label_en": "Same prompt, other runs",
+              "text_en": "@ajith_io (x.com/ajith_io/status/2103449416325890146), @kenn at xhigh (x.com/kenn/status/2103337314021937232), @himanshutwtxs with sound (x.com/himanshutwtxs/status/2103495232637882858), @thismacapital as a French product ad, \"15 minutes, 2-3 revisions, all HTML/JS/CSS\" (x.com/thismacapital/status/2103773635714375808).",
+              "label_zh": "同提示词复现",
+              "text_zh": "@ajith_io(x.com/ajith_io/status/2103449416325890146);@kenn 用 xhigh(x.com/kenn/status/2103337314021937232);@himanshutwtxs 带音效版(x.com/himanshutwtxs/status/2103495232637882858);@thismacapital 法语产品广告版,自述「15 分钟、改 2-3 次、全用 HTML/JS/CSS」(x.com/thismacapital/status/2103773635714375808)。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Thousands of people ran this exact sentence, so the results rhyme with each other. A one-liner tests the setup, not an idea; use it to check your environment works.",
+              "label_zh": "踩坑",
+              "text_zh": "同一句话被大量复用,产出彼此「押韵」。一句话测的是环境,不是创意 —— 适合拿来验证本地管线跑通。"
+            }
+          ]
+        },
+        {
+          "title_en": "Showreel brief that lists the techniques",
+          "title_zh": "加长版 Showreel 提示词(列出技术清单)",
+          "author": "@lukasersil",
+          "author_url": "https://x.com/lukasersil",
+          "source_url": "https://x.com/lukasersil/status/2103742861971726495",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "excerpt",
+          "prompt": "Create a bold, dynamic 15-second motion graphics showreel that feels like the ultimate portfolio piece of an exceptionally talented motion designer. Showcase a wide range of advanced techniques: kinetic typography, smooth transitions, 2D and 3D animation, abstract geometry, fluid simulations, …",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Czech): all of it is code made in Opus 5.5 at max effort.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖(捷克语):全部是 Opus 5.5(max effort)写的代码。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Three.js, WebGL shaders and Canvas; the creator says no image, video or music generator was used.",
+              "label_zh": "工具链与做法",
+              "text_zh": "Three.js、WebGL 着色器、Canvas;作者称没用任何图像、视频或音乐生成器。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "Two 15 s clips, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "两段各 15 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "One shape morphs through a dozen UI states on the beat",
+          "title_zh": "一个形状踩着节拍变遍 12 种 UI 状态(可复用 XML 模板)",
+          "author": "@twoclipping",
+          "author_url": "https://x.com/twoclipping",
+          "source_url": "https://x.com/twoclipping/status/2103273003555402193",
+          "platform": "x",
+          "aspect_ratio": "1:1",
+          "prompt_type": "full",
+          "prompt": "<inputs>\nAsk me for: 8 to 12 UI states I want the shape to become (e.g. button, loader, player, slider, toggle, tabs, chart, command palette, toast), pure black and white or one accent color, and a royalty-free song around 120 BPM (e.g. Mixkit, free for commercial use).\n</inputs>\n<direction>\nDribbble-level UI motion. One shape, never cut: every state is the same element morphing its size, radius and color while its content swaps with a short blur. A cursor drives every change with real clicks and drags. Light warm-gray canvas, black and white components, one clean UI font (Geist). Springs everywhere, a tiny overshoot at most. The camera zooms so each state fills the frame. The last frame is the first frame, so it loops.\nBanned: bouncy easing, particle bursts, glows, gradients on UI chrome, mismatched icon strokes, dead time, anything that looks like a template.\n</direction>\n<structure>\n120 BPM, 7 bars, something happens on every beat.\nButton → loader → check → dynamic island → music player with a play/pause morph → scrub the progress bar → it becomes a volume slider that stretches when dragged past max → a toggle flips on the beat → the knob becomes a liquid tab indicator → the tabs open into a chart that draws itself, with a tooltip on hover → it collapses into ⌘K → type to filter → enter → toast → back to the button.\n</structure>\n<build>\n1. One HTML file, square 1440x1440. Every style is computed from time inside seek(t): no CSS transitions, no timers, no state carried between frames.\n2. Springs are closed-form step responses. A value that changes target many times is the sum of one spring per change, so it stays a pure function of time.\n3. The tab indicator's two edges ride different springs, so the leading edge stretches ahead of the trailing one. Same trick for the toggle knob.\n4. Drags are direct manipulation: while the cursor is held, the value is computed from its position. On release it springs back from wherever it was.\n5. Analyze the song with numpy for the beat grid and start on a downbeat. Place every UI sound by its measured peak.\n6. Render with Playwright: 4 subframes per frame, blended with ffmpeg tmix for motion blur at 60fps.\n7. Render one frame per beat before the full render. Fix anything off the grid, cramped or hard to read.\n</build>\n<gotchas>\nNever put will-change on anything the camera scales or the text renders blurry. Text that swaps inside a morphing container needs its own enter and exit timing or it overlaps. Make the last frame identical to the first, cursor position and speed included, or the loop stutters.\n</gotchas>\n<start>\nAsk me for the inputs, then show me the state list on the beat grid before you write any code.\n</start>",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"opus 5.5 is f*cking cracked at motion design this entire video is code, 0 after effects\". The author open-sourced the prompt and wrote \"steal it\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「opus 5.5 is f*cking cracked at motion design this entire video is code, 0 after effects」;作者在原帖公开提示词并写「steal it」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Single 1440x1440 HTML; every style computed inside seek(t); closed-form springs; numpy beat analysis of the song; Playwright renders 4 subframes per frame blended with FFmpeg tmix for 60fps motion blur; one frame per beat is checked before the full render.",
+              "label_zh": "工具链与做法",
+              "text_zh": "单 HTML 1440x1440;所有样式在 seek(t) 里按时间计算;闭式弹簧;numpy 分析歌曲节拍;Playwright 每帧 4 个子帧 + FFmpeg tmix 做 60fps 运动模糊;全量渲染前先每拍渲一帧检查。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "14 s, 1440x1440, about 1.04M views and 12K likes.",
+              "label_zh": "成片规格",
+              "text_zh": "14 秒,1440x1440,约 104 万浏览、1.2 万赞。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Needs Node, Playwright, FFmpeg and Python with numpy (a Claude Code-style environment). The gotchas block is the author's own scar tissue: will-change blurs scaled text; a last frame that differs from the first makes the loop stutter. Use music licensed for commercial use.",
+              "label_zh": "踩坑",
+              "text_zh": "需要 Node + Playwright + FFmpeg + Python numpy(Claude Code 这类环境)。模板里的 gotchas 就是作者踩过的坑:will-change 让被缩放的文字发糊、首尾帧不一致导致循环卡顿。音乐要用可商用授权的。"
+            }
+          ]
+        },
+        {
+          "title_en": "One-take keynote-style launch film with liquid glass and an iris transition",
+          "title_zh": "一镜到底发布会风格品牌片(液态玻璃、光圈转场,5,200 字模板)",
+          "author": "@twoclipping",
+          "author_url": "https://x.com/twoclipping",
+          "source_url": "https://x.com/twoclipping/status/2103835273813496100",
+          "platform": "x",
+          "aspect_ratio": "1:1",
+          "prompt_type": "full",
+          "prompt": "<inputs>\nAsk me for: a one-word brand name for the wordmark (a verb works best), 9 to 12 high-res photos, a royalty-free song around 120 BPM with a drop and a quiet breakdown (Mixkit, free for commercial use), and a free stock clip of a plain wall with moving plant shadows (Pexels).\n</inputs>\n<direction>\nAn Apple-keynote launch film, 2D only, one continuous take. Every scene is made out of the previous one: nothing fades, blurs or cuts. Objects change shape instead: text rises out of a mask line, icons pop from zero on a spring, bars draw across, pages push, and a black shape floods the whole frame and contracts into the next scene. Warm off-white canvas, black UI, iOS 26 liquid glass over the photos. Archivo (wdth 125, weight 800) for the wordmark, Geist for UI. A cursor drives every change with real clicks, drags and long-presses. The camera zooms screen-studio style so each moment fills the square, and the cursor scales with it.\nBanned: crossfades, blur-ins, brightness \"developing\", 3D flips, particles, glows, holds longer than 1s, anything that looks like a template.\n</direction>\n<structure>\n120 BPM, 54 beats, something happens on every beat.\nOpen: the wordmark squeezes into its own period like an accordion, the dot grows into a black pill, a label rises inside it. Click: six iris blades close over the label and snap open onto a photo. The circle becomes a square, shrinks, the grid unfolds from behind it like a paper map (center, plus, corners), reflows into a bento, and a click zooms into one tile, landing exactly on the drop.\nGlass: a glass word pops in letter by letter, melts into a droplet that stretches into a glass toolbar. The adjust icon turns it into a slider. Dragging relights the photo from day to golden hour (two aligned shots), and the knob turns into a glass lens while held. It lifts into a glass orb, the next photo opens inside it as a circle, and the orb expands into a lock screen: glass clock digits, date, and a home bar that stretches into a glass music player.\nStage: the lock screen pulls back into a phone (the bezel grows out of the screen edge). The Dynamic Island stretches like liquid, pinches off, flies over and grows into a Mac window that rolls up like a blind. Long-press the wallpaper, drag it onto a Safari tab, the page pushes in, drop it and it becomes the hero of a landing page. Scroll: the hero morphs into a framed print on a product card, with the mat and molding growing out of the photo's edge. Pick a frame color (it paints across) and a size, then the nav button flies down into \"Order print\".\nOrder: one black shape keeps morphing: Ordered ✓ → Printing % → On its way (a van on a route) → Delivered ✓.\nWall: the delivered circle floods the frame edge to edge, holds black for a beat, and contracts into the framed print hanging on the real wall footage. The same iris opens onto the print, closes again, the frame floods the screen and contracts into the pill → the dot → the letters spring back out, landing on the beat return. Last frame = first frame.\n</structure>\n<build>\n1. One HTML file, square 1440x1440. Every style is computed from time inside an async seek(t): no CSS transitions, no timers, no state between frames.\n2. Springs are closed-form step responses. A value with many targets is the sum of one spring per change, so it stays a pure function of time.\n3. Liquid glass: each glass element holds its own clone of the scene behind it, filtered with an SVG feImage displacement map (a rounded-rect distance field) through three feDisplacementMaps at slightly different scales for chromatic edges, plus a rim light. Glass letters: a canvas distance field per glyph gives the map, mask and highlights.\n4. Goo: blur + alpha threshold, then composite the source atop it so the glass stays sharp inside.\n5. Iris: 6 blades around a hexagonal aperture. Each blade is its two vertices, both edge extensions and the SHORT arc between them.\n6. Wordmark squeeze: every letter moves toward the dot by the same factor and its drawn width follows (narrow the wdth axis, scale the rest), so the letters stay touching.\n7. Footage: re-encode all-intra (ffmpeg -g 1), load it as a blob URL, await 'seeked' before drawing each frame.\n8. Sound: a downloaded SFX for every event (Mixkit), never synthesized, each placed by its measured peak. The song starts on a downbeat: the zoom lands on the drop, the wall sits in the breakdown, the wordmark returns with the beat. Loudnorm to -14 LUFS.\n9. Render with Playwright: 4 subframes per frame blended with ffmpeg tmix, 60fps. Check one frame per beat, then scan for single-frame pops (frame-difference spikes 3x their neighbours).\n</build>\n<gotchas>\nbackdrop-filter: url() misreads displacement maps in Chromium, so clone the scene instead. A flood must overscale past the corners and take about 0.3s, or half the screen changes in one frame. A child with visibility: visible shows through a hidden parent, so use inherit. Text that swaps inside a morphing shape needs its own mask. python http.server can't range-seek video, so use the blob URL.\n</gotchas>\n<start>\nAsk me for the inputs, then show me the beat map and 4 stills (open, glass, stage, wall) before you write the full film.\n</start>",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"OPUS 5.5 IS THE ONLY MOTION DESIGNER YOU NEED… pure code\". Full prompt (5,200+ characters) published in the post.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「OPUS 5.5 IS THE ONLY MOTION DESIGNER YOU NEED… pure code」;5,200+ 字符完整提示词在原帖公开。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Single 1440x1440 HTML with async seek(t); closed-form springs; SVG feDisplacementMap liquid glass; real footage re-encoded all-intra and seeked per frame; licensed SFX placed by measured peak; loudness normalised to -14 LUFS; Playwright 4 subframes + tmix at 60fps; frame-difference scan for single-frame pops.",
+              "label_zh": "工具链与做法",
+              "text_zh": "单 HTML 1440x1440 + async seek(t);闭式弹簧;SVG feDisplacementMap 做液态玻璃;真实素材全 I 帧重编码后逐帧 seek;可商用音效按峰值对位;-14 LUFS 响度标准化;Playwright 4 子帧 + tmix 60fps;帧差扫描抓单帧跳变。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 29 s, 1440x1440, about 130K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 29 秒,1440x1440,约 13 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "You supply the photos, the track and a stock clip. Chromium's backdrop-filter: url() misreads displacement maps, and python http.server cannot range-seek video; both are in the gotchas.",
+              "label_zh": "踩坑",
+              "text_zh": "照片、音乐、Pexels 素材要自己准备。Chromium 的 backdrop-filter:url() 读不对位移图,python http.server 不能 range-seek 视频,模板 gotchas 里都写了。"
+            }
+          ]
+        },
+        {
+          "title_en": "Minimal product launch: scanning wall of vertical clips, cut on the beat",
+          "title_zh": "极简高端产品片:竖屏素材扫描墙 + 卡点",
+          "author": "@twoclipping",
+          "author_url": "https://x.com/twoclipping",
+          "source_url": "https://x.com/twoclipping/status/2102554209166000267",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "<inputs>\nAsk me for: the product name and a one-line promise, 3 to 5 UI moments to show, one accent color, 10 to 20 real vertical clips I own, and a royalty-free song with a clear drop (e.g. Mixkit, free for commercial use).\n</inputs>\n<direction>\nHigh-end minimal. One idea per shot, lots of empty space, one accent color, one clean sans (Geist or Inter) with tight tracking. Masked type reveals, match cuts, one smooth camera language. Real footage only, never placeholder cards. No full stops in on-screen text.\nBanned: shockwave rings, particle bursts, RGB split, camera shake, lens flares, neon glows, grid floors, flashing backgrounds, bouncy easing.\n</direction>\n<structure>\n10 bars at 120 BPM, 2 seconds each.\nBar 1: the hook lands word by word on the beats.\nBar 2: one hook word morphs into the product UI. A cursor types and clicks.\nThe drop: a circle opens out of the button into a dark scene.\nThen one move per bar: a wall of real clips with a scan line and 3 winners, the key output as big type, a 3D carousel of real videos with floor reflections and a motion-blurred whip onto one hero clip, the hero in a phone next to a panel that flips into results, big stats on push cuts, a 3-word ticker, a logo reveal, a fade to black.\n</structure>\n<build>\n1. One HTML file at 1920x1080. Every style is computed from time inside window.seek(t): no CSS animations, no timers, no state between frames.\n2. Real video: extract clips to 30fps JPEG sequences with ffmpeg and swap img sources per frame. seek awaits the image decodes.\n3. Analyze the song with numpy: tempo, beat grid, energy per bar, the drop. Calibrate the grid to the real kick hits. Every cut sits on a downbeat, every UI hit on a beat.\n4. Render with Playwright: 3 subframes per frame at t minus, at, and plus 1/240s, then blend with ffmpeg tmix for real motion blur at 60fps.\n5. Place each sound effect so its measured peak, not its file start, lands on the event. Keep the effects quiet under the music. Loudnorm to -14 LUFS.\n6. Probe 20 or more frames before the full render. Fix anything cluttered, overlapping or hard to read.\n</build>\n<gotchas>\nNever set opacity or filter on a preserve-3d element, because it flattens and both faces show. Fade its wrapper instead. Measure element positions at runtime for match cuts. Only use music and sound effects whose license allows commercial use.\n</gotchas>\n<start>\nAsk me for the inputs, then show me a storyboard with every timing on the beat grid before you write any code.\n</start>",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"this entire video is code opus picked the music, downloaded the sfx, built every frame and synced it all to the beat by itself\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「this entire video is code opus picked the music, downloaded the sfx, built every frame and synced it all to the beat by itself」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Single 1920x1080 HTML with window.seek(t); real clips extracted to 30fps JPEG sequences and swapped per frame; numpy tempo, beat grid, energy and drop analysis; 3 subframes of motion blur; 20+ frames probed before the full render.",
+              "label_zh": "工具链与做法",
+              "text_zh": "单 HTML 1920x1080 + window.seek(t);真实视频用 FFmpeg 抽成 30fps JPEG 序列逐帧换图;numpy 分析速度、节拍网格、能量与 drop;3 子帧运动模糊;全量前先抽查 20+ 帧。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "20 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "20 秒,1920x1080。"
+            },
+            {
+              "label_en": "About the prompt",
+              "text_en": "X auto-inserted a stray \"http://\" into build step 1 of the posted text; it is removed here and nothing else is changed.",
+              "label_zh": "提示词说明",
+              "text_zh": "原帖 build 第 1 条里被 X 自动插入了一个多余的「http://」,此处已去掉,其余未改。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Opacity or filter on a preserve-3d element flattens it and shows both faces; fade the wrapper instead.",
+              "label_zh": "踩坑",
+              "text_zh": "preserve-3d 元素上设 opacity / filter 会被拍平、正反面都露出来,要淡出外层 wrapper。"
+            }
+          ]
+        },
+        {
+          "title_en": "Mobile-game reward and gacha reveal (Three.js toon shading + GSAP)",
+          "title_zh": "手游「高光时刻」结算 / 抽卡动效(中文长模板)",
+          "author": "@op7418",
+          "author_url": "https://x.com/op7418",
+          "source_url": "https://x.com/op7418/status/2104085484347818226",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "帮我做一个原创的手游「高光时刻」动效：[主体，例如：开宝箱 / 段位晋升 / 成就解锁 / Boss 掉落 / 角色升级]。\n做成一个可以直接打开的单文件网页（HTML + CSS + JS），点一下就能完整播放，效果对标商业手游的结算 / 奖励演出。\n【世界观与风格】\n- 原创美术，不要模仿任何现有游戏的 IP、角色或 Logo。\n- 卡通手游风：高饱和配色，统一的深色描边（例如 #1A1033），圆润厚重的造型。\n- 配色随等级升级：[等级阶梯，例如：普通绿 → 稀有蓝 → 史诗紫 → 传说金]。每升一级都要切换主色、光效颜色和背景色调。\n- 标题用圆胖的游戏字体（如 Titan One / Lilita One），描黑边，加投影；文字逐字「砸」进画面，带回弹。\n【主体物：做成真 3D】\n- 用 Three.js 建模，不要用平面 SVG 贴图。要有厚度、倒角，以及符合主体的结构细节（木板缝、铆钉、包边、宝石切面、锁扣等）；木板缝这类细节用真实几何体拼出来，不要贴黑线条。\n- 着色用卡通分阶（MeshToonMaterial 加 3～4 阶的渐变贴图），配三种灯光：主光、天光、等级色的轮廓光。\n- 描边用后期边缘检测：渲染法线图 + 深度图，再用着色器画线。外轮廓粗、零件交界细，粗细全程一致；另外做 1.5 倍超采样和多重采样抗锯齿。\n不要用「放大一圈的黑色背面」那种描边，那样粗细不均、转角会断。\n深度判断的阈值要放宽，接缝主要靠法线判断，否则斜着看的表面会冒出细碎斜纹。\n- 活动部件要真实运动，比如箱盖绕铰链翻开、奖章绕竖轴旋转。\n- 待机时主体缓慢左右转动，让人看到侧面和厚度，同时轻微上下浮动；脚下要有随高度变化的柔和投影。\n【如果画面里有 2D 插画（卡面、奖励图标、角色）】\n- 三层卡通着色：底色、成块的阴影色、高光色，不要只用一层渐变。\n- 线条分粗细：外轮廓粗，内部结构线细。\n- 每个角色或物件要有自己的表情和姿态，不要所有东西共用同一张脸。\n- 脚下画投影，让主体「站」在画面里；背景按属性区分图案，不要全用同一套放射线。\n【演出节奏：五个阶段，缺一不可】\n1. 预备：主体待机浮动，每隔几秒抖一下提示可以点击，底部显示「点击」提示。\n2. 升级：每点一次，主体跳起、在空中转一圈、落地时压扁再回弹；同时切换到下一等级的颜色，闪一下光，冒一圈粒子，标题更新。\n3. 蓄力（约 1 秒）：主体越抖越剧烈，缝隙透出光，四周粒子往中心吸，音效音调持续上升；最后一刻猛地压扁。\n4. 爆发：从爆点向外扩散的泛光闪白、屏幕震动、镜头往前一推、多层冲击波、细长流光迸射、闪光星点、金币和宝石（带旋转）。高等级的爆发要明显更强。彩带只在最高潮用一次，不要满屏彩带。\n5. 揭晓与结算：\n- 奖励卡片从主体里沿弧线飞出，落位时带超调和晃动收尾，数字滚动计数。\n- 稀有物品带彩虹流光边框和「NEW!」角标。\n- 点击领取后，金币和宝石沿贝塞尔曲线飞进右上角的余额，每到一个余额就跳一下。\n【揭晓舞台：让主角独占画面】\n- 最高稀有度揭晓时，其他元素收起或淡出，背后换成一层干净的渐变幕布加缓慢旋转的柔光，不要让主角压在杂乱的背景上。\n- 幕布出现时，把场景里的其他 3D 物件隐藏掉，否则后期描边会把它们的轮廓线画在幕布上。\n- 主角的外发光要放在主体背后，只从边缘溢出，不能盖在主体前面把它糊成一片白。\n- 可以加一圈围绕主角盘旋的星尘拖尾，但轨道必须完整在主角轮廓外侧，不能从主体正面扫过。\n【光效：必须柔和，不能有硬边】\n- 背景光芒：用带渐变过渡的 conic-gradient，不要一刀切的色块边缘；叠 2～3 层不同密度、不同转速的光。\n- 光柱：由 5～7 道带模糊的光束呈扇形散开，亮度各自轻微闪动；根部加一团柔光核心，光里有光尘缓慢上飘。\n- 闪白：从爆点向外的径向泛光（mix-blend-mode: screen），强度不超过 0.8，不要整屏纯白过曝。\n- 粒子：每个火花都带一圈低透明度的外晕；冲击波用三层描边（宽而淡、中等、细而亮）。\n【材质与界面】\n- 边框、名牌、按钮要有材质感：金属拉丝渐变、左上亮右下暗的倒角光、内阴影；按稀有度换镶嵌件（钢铆钉 → 银框宝石 → 金框钻石加小王冠）。\n- 小卡片上不要塞小字数值；详细数值放到揭晓时的信息面板里，面板里的数字滚动上涨，并弹出「▲+数值」。\n- 画在 Canvas 上的贴图，分辨率至少是屏幕上最大显示尺寸的 1.5 倍，否则放大时会发虚。\n【动画原则】\n- 用 GSAP 时间线编排。所有动作都要有挤压拉伸、超调和弹性回弹，不要匀速。\n- 粒子系统用 Canvas 2D 自己写：重力、阻力、生命周期、叠加混合，以及「吸入」「曲线飞行」「环绕」三种运动。\n- 不要用 CSS 3D 透视去翻转大尺寸元素，放大加侧翻时会被投影成铺满屏幕的平面，3D 翻转一律放在 WebGL 里做。\n- 所有「抖动」「呼吸」类的循环补间，在状态切换时要先取消再归零，避免它比停止指令晚一帧结束，又把值设回去。\n【音效】\n- 全部用 Web Audio 实时合成，不用音频文件：跳起、落地、升级和弦、蓄力上升音、爆炸低频加噪声、弹出音、计数滴答、金币叮当、胜利号角。\n- 第一次点击时才初始化音频；右上角放静音开关。\n【界面与工程】\n- 顶部 HUD：模式切换、金币和宝石余额、静音按钮。\n- 手机宽度也要能用；遵守「减少动态效果」设置（关闭震屏，减少粒子）。\n- 动画状态机要严谨：动画播放中忽略点击，不能出现点击被吞或状态错乱。\n- 目标 60fps。第一次打开时就是完整的待机画面，不能是空白。\n【交付前自检】\n在蓄力、爆发、揭晓、结算这几个时刻各截一张图，逐张检查：\n- 主角有没有被光晕、粒子或文字挡住？\n- 有没有过曝成一片白？\n- 背景是否杂乱，有没有穿帮的描边线？\n- 小字是否能看清？\n- 结算后是否还有东西在不该动的时候继续抖动？\n最后告诉我：每个阶段的时长，以及哪些参数可以调整演出强度。",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Posts: \"using Opus 5.5 to make game result animations\" and \"the Opus 5.5 game motion prompt is here\" (Chinese).",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「用 Opus 5.5 做游戏结算动画」「Opus 5.5 游戏动效制作提示词来了」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "A 2D SVG version first, then rebuilt in Three.js as real 3D (MeshToonMaterial bands, normal + depth post-process outlines), a GSAP timeline, Canvas 2D particles and Web Audio synthesised effects, in one HTML page that plays on click and is screen-recorded.",
+              "label_zh": "工具链与做法",
+              "text_zh": "先出 2D SVG 版 → 改成 Three.js 真 3D(MeshToonMaterial 分阶着色、法线 + 深度后期描边)→ GSAP 时间线 → Canvas 2D 粒子 → Web Audio 合成音效 → 单文件网页,点一下播放,再录屏。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "Gacha version with the prompt: about 17.6 s, 1920x1080, about 130K views. Treasure-chest version: x.com/op7418/status/2103724883301814408 (about 14.7 s, about 140K views).",
+              "label_zh": "成片规格",
+              "text_zh": "抽卡版 + 提示词:约 17.6 秒,1920x1080,约 13 万浏览。宝箱版:x.com/op7418/status/2103724883301814408(约 14.7 秒,约 14 万浏览)。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "The long \"do not\" lists are the lessons: inverted-hull outlines vary in width, CSS 3D flips of large elements project across the whole screen, and looping tweens that are not reset keep shaking after the reveal.",
+              "label_zh": "踩坑",
+              "text_zh": "模板里大段「不要……」就是避坑经验:放大背面式描边粗细不均、CSS 3D 翻转大元素会铺满屏幕、循环补间不归零导致结算后还在抖。"
+            }
+          ]
+        },
+        {
+          "title_en": "Pixel-art wizard casting a spell, pure Canvas code",
+          "title_zh": "纯代码像素风巫师施法循环动画",
+          "author": "@majidmanzarpour",
+          "author_url": "https://x.com/majidmanzarpour",
+          "source_url": "https://x.com/majidmanzarpour/status/2102476258948927543",
+          "platform": "x",
+          "aspect_ratio": "6:5",
+          "prompt_type": "full",
+          "prompt": "Create a single self-contained HTML file that renders an animated pixel art wizard casting a spell, using vanilla JavaScript and Canvas 2D. No external assets, libraries, or network requests.\nRENDERING\n- Draw everything to an offscreen canvas at a fixed logical resolution of 128x96, then blit to a fullscreen display canvas scaled by the largest integer factor that fits the window, centered, with imageSmoothingEnabled = false and CSS image-rendering: pixelated.\n- All drawing snaps to integer coordinates on the logical canvas. No sub-pixel positions, anti-aliasing, gradients, or shadowBlur.\n- Fixed palette of ~24 hex colors: deep blues/purples for night sky, warm robe tones, 3-4 bright magic colors. Every pixel comes from this palette.\nCHARACTER\n- Build the wizard procedurally from filled rects and pixel runs, ~24x32 logical pixels: pointed hat with a bend, long beard, two-shade robe with darker outline, staff with a gem at the tip.\n- Parameterize the pose (staff angle, arm raise, head tilt, robe sway). Animate parameters smoothly, then quantize to the pixel grid each frame so motion reads at an 8-12 fps pixel animation feel even though the loop runs at 60fps.\nANIMATION\n- Looping state machine: IDLE (2-frame bob, beard sway) -> CHARGE (staff raises, gem flickers, sparks spiral inward) -> CAST (bright burst, projectile fires across the scene, 1-2 pixel screen shake) -> RECOVER (settle back). Ease pose parameters between keyframes.\n- Pooled allocation-free particle system: preallocate and reuse. Sparks orbit the gem during CHARGE, explode outward on CAST, each particle stepping its palette index from white to magic color to dark before despawn. Snap particle positions to the grid when drawing.\n- Fixed 60hz timestep update with rAF rendering. Zero object allocation inside the loop.\nSCENE\n- Minimal background: dark sky, a few twinkling 1px stars, moon, stone floor line. Character silhouette must read clearly.\n- Subtle 1px rim light on the wizard from the gem, brightening during CHARGE and CAST.\nQUALITY BAR\n- Crisp pixels at any window size, seamless loop, stable 60fps, readable silhouette. Should look like a polished 16-bit sprite animation, not vector shapes scaled down.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"opus 5.5, animated pixel art wizard, pure code prompt shared below\" (launch day). Prompt shared in the reply.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「opus 5.5, animated pixel art wizard, pure code prompt shared below」(发布当天),提示词在回复中公开。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Single HTML, vanilla JS and Canvas 2D at a 128x96 logical resolution scaled by an integer factor, a fixed palette of about 24 colours, a state-machine animation and an allocation-free particle pool; the clip is a screen recording.",
+              "label_zh": "工具链与做法",
+              "text_zh": "单 HTML、原生 JS + Canvas 2D、128x96 逻辑分辨率整数倍放大、约 24 色固定调色板、状态机动画、无分配粒子池;成片为录屏。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 11 s, 1080x890, about 450K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 11 秒,1080x890,约 45 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "This one runs a live requestAnimationFrame loop rather than deterministic seek(t), so a screen recording depends on machine speed. For a stable MP4, rewrite it in the seek(t) style of the UI-morph template.",
+              "label_zh": "踩坑",
+              "text_zh": "这条用 rAF 实时循环、不是 seek(t) 确定性渲染,录屏受机器性能影响;要出稳定 MP4,改成上面 UI 变形模板那种 seek(t) 写法。"
+            }
+          ]
+        },
+        {
+          "title_en": "Colourful remix of the UI-morph template that exposed the default render pipeline",
+          "title_zh": "同模板「更彩色」复现,揭示 Opus 默认渲染管线",
+          "author": "@__morse",
+          "author_url": "https://x.com/__morse",
+          "source_url": "https://x.com/__morse/status/2103485566570369333",
+          "platform": "x",
+          "aspect_ratio": "1:1",
+          "prompt_type": "summary",
+          "prompt": "Ran @twoclipping's \"one shape, a dozen UI states\" template unchanged, with one extra instruction: make the video more colorful.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"opus 5.5 is really amazing one shot\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「opus 5.5 is really amazing one shot」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Per the author: Opus put all the code in one index.html, rendered it frame by frame in a headless Playwright window via a seek function plus eval, then assembled the MP4 with FFmpeg. It prefers zero dependencies and writes everything from scratch, and did not reach for Remotion or HyperFrames even though they were available.",
+              "label_zh": "工具链与做法",
+              "text_zh": "作者原话概括:Opus 把所有代码放进单个 index.html,用 seek 函数 + eval 在无头 Playwright 窗口里逐帧渲染,再用 FFmpeg 合成 MP4;它偏好零依赖、从头手写,即使装了 Remotion / HyperFrames 也不主动用。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 15.4 s, 1440x1440.",
+              "label_zh": "成片规格",
+              "text_zh": "约 15.4 秒,1440x1440。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "This post is the clearest evidence that the single-HTML route is the default. If you want a framework, name it in the prompt.",
+              "label_zh": "踩坑",
+              "text_zh": "这条是「Opus 默认走单 HTML 路线」最直接的证据 —— 想用框架,必须在提示词里点名。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "product-launch",
+      "name_en": "Product Launch",
+      "name_zh": "产品宣传片",
+      "cases": [
+        {
+          "title_en": "Punchy launch video for an inference startup, from one line",
+          "title_zh": "推理创业公司发布片(一句话)",
+          "author": "@deedydas",
+          "author_url": "https://x.com/deedydas",
+          "source_url": "https://x.com/deedydas/status/2102787937482252537",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "make a modern slick and punchy video for a modern startup that works on inference",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 is incredible at instructional video generation. I made this launch video for a inference startup in 1min for ~$2」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "26 s, 1920x1080, about 350K views.",
+              "label_zh": "成片规格",
+              "text_zh": "26 秒,1920x1080,约 35 万浏览。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About 1 minute and about $2 by the author's account; most other cases here report $10 to $400, so treat it as one data point.",
+              "label_zh": "作者自述投入",
+              "text_zh": "作者自述约 1 分钟、约 $2;本页其他案例自述多在 $10 到 $400 之间,这只是一个数据点。"
+            }
+          ]
+        },
+        {
+          "title_en": "Three-step HyperFrames recipe: install the skill, reuse the showreel line, point at your project",
+          "title_zh": "HyperFrames 三步教程(葡语):装 skill + 爆款提示词 + 指向项目文件夹",
+          "author": "@thayto_dev",
+          "author_url": "https://x.com/thayto_dev",
+          "source_url": "https://x.com/thayto_dev/status/2104200591278739735",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "make a dynamic 15-second motion graphics video that shows what an incredible motion designer you are, like it's your showreel for a résumé. go all out.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Portuguese): \"model used: opus 5.5 (effort: max)\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖(葡语):「modelo usado: opus 5.5 (effort: max)」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "1) Install the HyperFrames skill. 2) Use the one-line showreel prompt above. 3) Reference your project folder in the prompt. 4) Wait. The author says it used about 5% of a five-hour usage window. Relays a tutorial by @gabrielbuzziv.",
+              "label_zh": "工具链与做法",
+              "text_zh": "1)安装 hyperframes skill;2)用上面那句 Showreel 提示词;3)在提示词里引用你的项目文件夹;4)等待。作者说只用了 5 小时额度的约 5%。转述自 @gabrielbuzziv 的教程。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "15 s, 1920x1080, a promo for a résumé tool.",
+              "label_zh": "成片规格",
+              "text_zh": "15 秒,1920x1080,一个简历工具的宣传片。"
+            }
+          ]
+        },
+        {
+          "title_en": "Reusable 30-second business explainer template",
+          "title_zh": "「给你的生意做 30 秒讲解片」通用模板",
+          "author": "@alex_prompter",
+          "author_url": "https://x.com/alex_prompter",
+          "source_url": "https://x.com/alex_prompter/status/2103499977632997524",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "Adopt the role of an expert motion designer. Build a 30-second animated explainer for my business as a single HTML page. 5 scenes. The customer's problem, what I do, how it works in 3 steps, one proof point, and my name at the end. Bold text, smooth transitions, my brand colours. My business [DESCRIBE WHAT YOU SELL, WHO IT'S FOR AND YOUR COLOURS]",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Claude Opus 5.5 can make an explainer video for your business\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Claude Opus 5.5 can make an explainer video for your business」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "34.5 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "34.5 秒,1920x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "The author's advice: direct it. Give it the scenes, the length and the pace; fill the bracket with what you sell, who it is for and your colours.",
+              "label_zh": "踩坑",
+              "text_zh": "作者的建议:「the trick is to direct it」—— 给它场景、时长和节奏;方括号里写清你卖什么、卖给谁、品牌色。"
+            }
+          ]
+        },
+        {
+          "title_en": "Arabic vertical promo for an AI coding-tutor app (Remotion + TTS)",
+          "title_zh": "阿拉伯语竖屏 App 推广片(Remotion + TTS 配音)",
+          "author": "@YarHmm",
+          "author_url": "https://x.com/YarHmm",
+          "source_url": "https://x.com/YarHmm/status/2103505435802341449",
+          "platform": "x",
+          "aspect_ratio": "9:16",
+          "prompt_type": "summary",
+          "prompt": "Asked Opus 5.5 (medium to high effort) to build an Arabic, right-to-left vertical promo for an AI coding-tutor app in Remotion so it could be previewed quickly, limiting sound effects to camera shutter and lens sounds, with narration generated by a separate text-to-speech model.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Author's follow-up (Arabic): used Claude with Opus 5.5, medium to high effort.",
+              "label_zh": "模型依据",
+              "text_zh": "作者补充(阿语):用的是 Claude 的 Opus 5.5,思考强度中到高。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Remotion for previews; voice from Gemini 3.8 Flash TTS; about 1.5 hours of conversation.",
+              "label_zh": "工具链与做法",
+              "text_zh": "Remotion 方便预览;配音用 Gemini 3.8 Flash TTS;约 1.5 小时对话。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About a quarter of a five-hour usage window.",
+              "label_zh": "作者自述投入",
+              "text_zh": "约消耗 5 小时额度的四分之一。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 55.7 s, 1080x1920 vertical.",
+              "label_zh": "成片规格",
+              "text_zh": "约 55.7 秒,1080x1920 竖屏。"
+            }
+          ]
+        },
+        {
+          "title_en": "Kotlin promo generated from the language's website with HyperFrames",
+          "title_zh": "Kotlin 官方推广片(HyperFrames skill + 指向官网)",
+          "author": "JetBrains",
+          "author_url": "https://x.com/jetbrains",
+          "source_url": "https://x.com/jetbrains/status/2102459650125754812",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Installed the HyperFrames skills and pointed Opus 5.5 at kotlinlang.org, letting it gather the material and produce the product video on its own.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"This product video was generated entirely by Claude Opus 5.5\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「This product video was generated entirely by Claude Opus 5.5」。"
+            },
+            {
+              "label_en": "Who posted it",
+              "text_en": "Posted by JetBrains' own account about its own language; not an apimodels.app customer case.",
+              "label_zh": "发布方",
+              "text_zh": "JetBrains 官方账号为自家语言发布,不是 apimodels.app 的客户案例。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 35 s, 2560x1440.",
+              "label_zh": "成片规格",
+              "text_zh": "约 35 秒,2560x1440。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Shows that pointing it at a site URL and letting it fetch its own material works.",
+              "label_zh": "踩坑",
+              "text_zh": "说明「把官网 URL 给它,让它自己取素材」是可行的。"
+            }
+          ]
+        },
+        {
+          "title_en": "Promo animation for a 3D-printed DIN-rail enclosure it designed first",
+          "title_zh": "3D 打印外壳产品动画(同一会话里先设计外壳再做宣传片)",
+          "author": "@VectorCrossProd",
+          "author_url": "https://x.com/VectorCrossProd",
+          "source_url": "https://x.com/VectorCrossProd/status/2104093497561436573",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "In one Claude Code session: asked Opus 5.5 to design a 3D-printable enclosure for an existing PCB, then to make a promo animation for that enclosure.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Claude Opus 5.5 created a 3D printable enclosure for an existing PCB. Then it created this promo video for it.\"",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Claude Opus 5.5 created a 3D printable enclosure for an existing PCB. Then it created this promo video for it.」"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Claude Code; the PCB enclosure, printable STL and the promo animation all came from prompts.",
+              "label_zh": "工具链与做法",
+              "text_zh": "Claude Code;外壳、可打印 STL 和宣传动画都由提示完成。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "10 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "10 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "Notion column-permissions trailer in Remotion: 2 days, 33 versions",
+          "title_zh": "Notion「列权限」功能预告片(Remotion,2 天 33 版)",
+          "author": "@wustep",
+          "author_url": "https://x.com/wustep",
+          "source_url": "https://x.com/wustep/status/2104610435571884086",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Author's note: \"with @claude's opus 5.5 [xhigh]\".",
+              "label_zh": "模型依据",
+              "text_zh": "作者补充:「with @claude's opus 5.5 [xhigh]」。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About $400 of Claude credit at API rates; the author says a $100-a-month plan would also cover it.",
+              "label_zh": "作者自述投入",
+              "text_zh": "约 $400 Claude 额度(按 API 计);作者说 $100/月套餐也够。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Process document: notion.notion.site/column-permissions-trailer",
+              "label_zh": "相关链接",
+              "text_zh": "过程文档:notion.notion.site/column-permissions-trailer"
+            },
+            {
+              "label_en": "Who posted it",
+              "text_en": "Made by a Notion employee for a Notion feature; not an apimodels.app customer case.",
+              "label_zh": "发布方",
+              "text_zh": "Notion 员工为 Notion 功能制作,不是 apimodels.app 的客户案例。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 31.9 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 31.9 秒,1920x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "A real brand film is far from one-shot: 33 versions before sign-off.",
+              "label_zh": "踩坑",
+              "text_zh": "真实品牌片远不是一次出片:33 版才定稿。"
+            }
+          ]
+        },
+        {
+          "title_en": "Shotbase launch video with HyperFrames, under 20 minutes",
+          "title_zh": "Shotbase 剪辑 App 发布片(HyperFrames,20 分钟内)",
+          "author": "@Miguel07Code",
+          "author_url": "https://x.com/Miguel07Code",
+          "source_url": "https://x.com/Miguel07Code/status/2102441708395041170",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Claude Opus 5.5 1-shotted the launch video of @shotbaseapp using @HyperFrames_ in less than 20 mins\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Claude Opus 5.5 1-shotted the launch video of @shotbaseapp using @HyperFrames_ in less than 20 mins」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 58 s, 1920x1080, about 150K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 58 秒,1920x1080,约 15 万浏览。"
+            }
+          ]
+        },
+        {
+          "title_en": "Cosmos moodboard-app promo, two prompts in HyperFrames",
+          "title_zh": "Cosmos 情绪板 App 宣传片(HyperFrames,2 条提示词)",
+          "author": "@kaolti",
+          "author_url": "https://x.com/kaolti",
+          "source_url": "https://x.com/kaolti/status/2103481296018092204",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 is probably the biggest jump in output quality I've seen lately. Built this in @HyperFrames_ for Cosmos, 2 prompts only. No references at all.\"",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 is probably the biggest jump in output quality I've seen lately. Built this in @HyperFrames_ for Cosmos, 2 prompts only. No references at all.」"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "39.5 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "39.5 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "UX case-study animation explaining design decisions",
+          "title_zh": "UX 设计决策讲解动画(面试作品集)",
+          "author": "@moguzbulbul",
+          "author_url": "https://x.com/moguzbulbul",
+          "source_url": "https://x.com/moguzbulbul/status/2104206095313215591",
+          "platform": "x",
+          "aspect_ratio": "4:3",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I was struggling to explain my UX decisions in interviews, so I made this kind of animation with Opus 5.5\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I was struggling to explain my UX decisions in interviews, so I made this kind of animation with Opus 5.5」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 42 s, 1600x1200, about 200K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 42 秒,1600x1200,约 20 万浏览。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "explainer",
+      "name_en": "Explainer & Education",
+      "name_zh": "讲解与教育",
+      "cases": [
+        {
+          "title_en": "Manim lesson on derivatives with edge-tts narration",
+          "title_zh": "Manim 导数概念教学片(edge-tts 配音)",
+          "author": "@LinearUncle",
+          "author_url": "https://x.com/LinearUncle",
+          "source_url": "https://x.com/LinearUncle/status/2103128559174971663",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "请用Manim给我制作一个导数概念学习的视频，要求通俗易懂，并且有例子，引人思考。配音使用edge-tts",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): Opus 5.5 + Manim made a lesson on derivatives; \"Opus 5.5 is clearly very good at Manim\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「opus 5.5 + Manim制作导数的教学视频,显然opus 5.5非常擅长使用Manim」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Claude Code with Manim, LaTeX and edge-tts installed locally.",
+              "label_zh": "工具链与做法",
+              "text_zh": "Claude Code;本地装 Manim、LaTeX、edge-tts。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "457 s (about 7.6 minutes), 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "457 秒(约 7.6 分钟),1920x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "No length was given and it planned a 7.6-minute lesson; add a time limit if you need one.",
+              "label_zh": "踩坑",
+              "text_zh": "没给时长,它自己规划出 7.6 分钟;需要控制时长就写上限。"
+            }
+          ]
+        },
+        {
+          "title_en": "12-minute Chinese explainer \"What is a Transformer\", rendered in JS",
+          "title_zh": "《什么是 Transformer》12 分钟中文讲解片(JS)",
+          "author": "@dotey",
+          "author_url": "https://x.com/dotey",
+          "source_url": "https://x.com/dotey/status/2103683057689522564",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "帮我用js制作一个视频，主题是：什么是 Transformer\n要深入浅出，让高中生也能看得懂，不仅high level说的清楚，也要有细节，包括注意力机制，甚至一些数学概念\n\n你可以用任何工具或者安装工具，可以联网检索\n\n请给我惊喜",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): made with Claude Code + Opus 5.5.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「由 Claude Code + Opus 5.5 制作」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 732 s (12.2 minutes), 1920x1080, about 190K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 732 秒(12.2 分钟),1920x1080,约 19 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "A short prompt with wide autonomy (any tool, web search allowed); the model chose the length and structure itself.",
+              "label_zh": "踩坑",
+              "text_zh": "短提示词 + 高自主度(可装任何工具、可联网),时长和结构都由模型自己规划。"
+            }
+          ]
+        },
+        {
+          "title_en": "Epic chronicle of Chinese civilization, frame-rendered with FFmpeg",
+          "title_zh": "《中华文明史》史诗编年片(逐帧渲染 + ffmpeg,五声调式配乐)",
+          "author": "@dotey",
+          "author_url": "https://x.com/dotey",
+          "source_url": "https://x.com/dotey/status/2103964025683927166",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "做一支史诗编年片《中华文明史》，可以写代码逐帧渲染，再用 ffmpeg 合成。\n配乐当时钟：五声调式，乐器从骨笛、编钟一路演进到管弦，BPM 随年代加快，所有切点踩拍。\n宣纸白描和玄底泥金两种画风交替；每卷一个主色和一套随时代演变的纹样（彩陶纹 → 饕餮纹 → 云气纹 → 卷草纹 → 缠枝纹 → 回纹）。\n每镜一个按词组出现的书法大字关键词，配一幅线稿。全片 HUD：左上朱印卷号，右侧竖排朝代名，底部卷轴时间尺和年份计数。\n卷交界用朱印盖下、鼓钟重击的冲击转场。先定拍点网格和分镜表，再渲染。\n地图只画示意，不画近现代真实人物，年代核对后再交付。",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post title: \"Chinese Civilization by Opus 5.5\" (Chinese).",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「《中华文明史》by Opus 5.5」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 217 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 217 秒,1920x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "A model Chinese director brief: the score is the clock, the beat grid and shot table come before rendering, dates are checked before delivery, and real modern people are kept out of frame.",
+              "label_zh": "踩坑",
+              "text_zh": "中文风格化导演 brief 的好范例:配乐当时钟、先定拍点网格和分镜表再渲染、年代核对后交付、不画近现代真实人物。"
+            }
+          ]
+        },
+        {
+          "title_en": "Explaining recursion in nine radically different video styles",
+          "title_zh": "用九种视频风格解释「递归」",
+          "author": "@emollick",
+          "author_url": "https://x.com/emollick",
+          "source_url": "https://x.com/emollick/status/2103688362960019567",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "A video explaining recursion, where every explanation about recursion has a radically different video style, make this self-referential & clever & fast moving.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post by Ethan Mollick: \"I had Claude Opus 5.5 make…\".",
+              "label_zh": "模型依据",
+              "text_zh": "Ethan Mollick(沃顿商学院)原帖:「I had Claude Opus 5.5 make…」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 75 s, 1920x1080, about 70K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 75 秒,1920x1080,约 7 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "A concept plus one structural rule (every section changes style) works better than a pile of adjectives.",
+              "label_zh": "踩坑",
+              "text_zh": "「给一个概念 + 一条结构约束(每段换风格)」比堆形容词有效。"
+            }
+          ]
+        },
+        {
+          "title_en": "Negroni recipe motion graphic from a single photo",
+          "title_zh": "从一张照片生成鸡尾酒配方动画",
+          "author": "@Ror_Fly",
+          "author_url": "https://x.com/Ror_Fly",
+          "source_url": "https://x.com/Ror_Fly/status/2102853258582880547",
+          "platform": "x",
+          "aspect_ratio": "1:1",
+          "prompt_type": "full",
+          "prompt": "We're going to try a little test. Do you think you could render a recipe motion graphic animation using javascript or html (w/e you think will produce the best) to show the full recipe from start to finish (empty glass to completed cocktail) - Explainer video style - Showing the recipe ingreidents + measurements as they're going into the cup. Should be a 30s video.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 rendered this in HTML from (1) image\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 rendered this in HTML from (1) image」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "One reference photo uploaded, then an HTML/JS animation, then recorded. Typos in the prompt are the author's and kept as published.",
+              "label_zh": "工具链与做法",
+              "text_zh": "上传 1 张参考图 → HTML/JS 动画 → 录制。提示词里的拼写错误是原文,照原样保留。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "30 s, 1080x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "30 秒,1080x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "The typical image-in, animation-out use: Opus 5.5 can read a photo, not a video.",
+              "label_zh": "踩坑",
+              "text_zh": "图片输入、动画输出的典型用法:Opus 5.5 能看图,不能看视频。"
+            }
+          ]
+        },
+        {
+          "title_en": "Interactive Raptor 3 rocket engine you can take apart (screen recording)",
+          "title_zh": "可拆解的猛禽 3 火箭发动机(交互网页 → 录屏)",
+          "author": "@konstantinsaifo",
+          "author_url": "https://x.com/konstantinsaifo",
+          "source_url": "https://x.com/konstantinsaifo/status/2104094723887501736",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Asked Opus 5.5 to explain how a rocket engine works by building an interactive Raptor 3 in the browser that you can take apart: cut it open, trace oxygen and methane through the two turbopumps, and throttle it to watch the shock diamonds move. The video is a screen recording of that page.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I asked Claude Opus 5.5 to explain how a rocket engine works by building an interactive Raptor 3\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I asked Claude Opus 5.5 to explain how a rocket engine works by building an interactive Raptor 3」。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Live page: airsup.ai/rocket-engine. Same author, fusion-reactor version: x.com/konstantinsaifo/status/2104216976801587629",
+              "label_zh": "相关链接",
+              "text_zh": "在线体验:airsup.ai/rocket-engine;同作者聚变反应堆版:x.com/konstantinsaifo/status/2104216976801587629"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 34.7 s, 1920x1080, about 1.15M views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 34.7 秒,1920x1080,约 115 万浏览。"
+            }
+          ]
+        },
+        {
+          "title_en": "Twin-paradox explainer in Japanese, paper-cutout style, 1,395 Canvas frames",
+          "title_zh": "双生子佯谬日文讲解(剪纸风,Canvas 1,395 帧)",
+          "author": "@masahirochaen",
+          "author_url": "https://x.com/masahirochaen",
+          "source_url": "https://x.com/masahirochaen/status/2102722719502704941",
+          "platform": "x",
+          "aspect_ratio": "1:1",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Japanese): \"made a Japanese version with Claude Code x Opus 5.5\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖(日语):「Claude Code × Opus 5.5で日本語版にしてみました」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Canvas rendered 1,395 frames and converted them to MP4; rendering took about 2 minutes.",
+              "label_zh": "工具链与做法",
+              "text_zh": "Canvas 渲染 1,395 帧转 MP4,渲染约 2 分钟。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "46.5 s, 1080x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "46.5 秒,1080x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "3Blue1Brown-style explainer on variational autoencoders",
+          "title_zh": "3Blue1Brown 风格 VAE 讲解(Manim + 真实训练 MNIST + 克隆配音)",
+          "author": "@ng169onX",
+          "author_url": "https://x.com/ng169onX",
+          "source_url": "https://x.com/ng169onX/status/2103183904563998809",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 can now make animated explainer videos end to end, in a style similar to 3Blue1Brown\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 can now make animated explainer videos end to end, in a style similar to 3Blue1Brown」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 5.6 minutes, 1920x1080 (low reach, about 1.5K views).",
+              "label_zh": "成片规格",
+              "text_zh": "约 5.6 分钟,1920x1080(浏览量很低,约 1.5K)。"
+            }
+          ]
+        },
+        {
+          "title_en": "Three-minute history of AI, 100% code in Remotion",
+          "title_zh": "3 分钟 AI 发展史(Remotion,约 7,400 行代码)",
+          "author": "@kimmonismus",
+          "author_url": "https://x.com/kimmonismus",
+          "source_url": "https://x.com/kimmonismus/status/2102844654169575547",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"This 3-minute film was made 100% in code by Claude in Claude Code\", with Opus 5.5.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「This 3-minute film was made 100% in code by Claude in Claude Code」,主题句写明 with Opus 5.5。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About 1 hour and 7% of a weekly usage allowance.",
+              "label_zh": "作者自述投入",
+              "text_zh": "约 1 小时、周额度的 7%。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 180 s, 1920x1080, about 200K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 180 秒,1920x1080,约 20 万浏览。"
+            }
+          ]
+        },
+        {
+          "title_en": "Black-hole lensing lab polished by reviewer and fixer agents overnight",
+          "title_zh": "引力透镜黑洞实验室(三轮多 agent 评审-修复,过夜跑)",
+          "author": "@Voxyz_ai",
+          "author_url": "https://x.com/Voxyz_ai",
+          "source_url": "https://x.com/Voxyz_ai/status/2103117246860345550",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I asked Opus 5.5 to explain gravitational lensing…\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I asked Opus 5.5 to explain gravitational lensing…」。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "5 hours 28 minutes in total, about $90 at API prices.",
+              "label_zh": "作者自述投入",
+              "text_zh": "全程 5 小时 28 分,按 API 价约 $90。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 21.8 s, 3840x2160.",
+              "label_zh": "成片规格",
+              "text_zh": "约 21.8 秒,3840x2160。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "The most complete public example of the review-and-fix loop.",
+              "label_zh": "踩坑",
+              "text_zh": "「评审-修复循环」方法最完整的公开样本。"
+            }
+          ]
+        },
+        {
+          "title_en": "4.6 billion years of Earth's evolution (Bilibili)",
+          "title_zh": "地球 46 亿年进化史(B 站)",
+          "author": "第十一次元",
+          "author_url": null,
+          "source_url": "https://www.bilibili.com/video/BV1Vfau6iE9Q/",
+          "platform": "bilibili",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Bilibili title: \"Opus 5.5's miracle\" (Chinese).",
+              "label_zh": "模型依据",
+              "text_zh": "B 站标题「Opus5.5的神迹」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "290 s, 2560x1440, about 80K plays.",
+              "label_zh": "成片规格",
+              "text_zh": "290 秒,2560x1440,约 8 万播放。"
+            }
+          ]
+        },
+        {
+          "title_en": "\"The Beauty of Group Theory\" promo film (Bilibili)",
+          "title_zh": "群论之美宣传片(B 站)",
+          "author": "sadssxa",
+          "author_url": null,
+          "source_url": "https://www.bilibili.com/video/BV12Zhm6oE6m/",
+          "platform": "bilibili",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Bilibili title: \"opus5.5 has arrived: The Beauty of Group Theory promo\" (Chinese).",
+              "label_zh": "模型依据",
+              "text_zh": "B 站标题「opus5.5真神降临 群论之美宣传片」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "263 s, 1920x1080, about 340K plays.",
+              "label_zh": "成片规格",
+              "text_zh": "263 秒,1920x1080,约 34 万播放。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "storyboard-to-video",
+      "name_en": "Directing Video Models",
+      "name_zh": "分镜调视频模型",
+      "cases": [
+        {
+          "title_en": "Infinite zoom through vintage collage worlds, generated assets composited in code",
+          "title_zh": "复古拼贴「无限缩放」(调多个生成模型出素材 + 代码合成)",
+          "author": "@koldo2k",
+          "author_url": "https://x.com/koldo2k",
+          "source_url": "https://x.com/koldo2k/status/2103129343253778767",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "Build a looping \"infinite zoom\" animation, After Effects style: the camera\ntravels from landscape to landscape by flying through vintage objects.\nLOOK: vintage collage realistic photo landscapes + black & white newspaper\ncutout objects (halftone, white paper border, soft shadow). Film grain,\nvignette, light flicker.\nWORLDS (loop): snowy mountains → pocket watch (swinging on its chain) →\nsea cliffs → box camera lens → desert dunes → magnifying glass →\nmisty lake → hand mirror → back to start.\nExtras: floating hat, phone, umbrella, gramophone, key; a 1950s man walking\ntoward the watch; a whale swimming across the cliffs sky.\nHOW:\n- Generate everything via the Magnific MCP (Seedream 5 Pro landscapes,\nGPT 2.5 transparent cutouts, depth maps, Kling 2.5 animation, Lyria 3\nmusic). List the generations + credit cost and wait for my OK first.\n- Split each landscape into 3 depth layers from its depth map and fill the\nhidden areas. Parallax: layer scale = camera^Z, Z between 0.45 and 1.22.\n- Each portal's glass holds the next world; cut seamlessly when it fills\nthe frame.\n- Constant speed: exponential zoom to a fixed point, each segment's duration\nproportional to log(zoom). Verify the cuts frame by frame.\n- Man & whale: generate on pure green (#00B140), animate in place with\nKling, key out every frame, build a seamless loop (ping-pong if needed).\n- Cutouts animate at 15 fps (on twos).\n- 20 s loop, 1920×1080, 30 fps. Music: 96 BPM, cut to exactly 8 bars = 20 s.\nDELIVER: an interactive artifact (viewer, AE-style timeline, music +\nMP4 download) and a rendered MP4 with music under 30 MB.\nShow me screenshots before each expensive step.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"this animation made with Opus 5.5\". The author shared the prompt (\"I'll leave you the prompt\").",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「this animation made with Opus 5.5」;作者主动公开提示词。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Generation through the Magnific MCP (Seedream 5 Pro landscapes, GPT 2.5 transparent cutouts, depth maps, Kling 2.5 animation, Lyria 3 music); Opus handled the depth layers and parallax, the exponential-zoom maths, green-screen keying, frame-by-frame cut checks, and delivered an interactive artifact plus an MP4.",
+              "label_zh": "工具链与做法",
+              "text_zh": "通过 Magnific MCP 调用 Seedream 5 Pro(风景)、GPT 2.5(透明抠图)、深度图、Kling 2.5(动画)、Lyria 3(音乐);Opus 负责分层视差、指数缩放数学、绿幕抠像、逐帧核对切点,交付交互 artifact 和 MP4。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "20 s, 1920x1080, about 73K views.",
+              "label_zh": "成片规格",
+              "text_zh": "20 秒,1920x1080,约 7.3 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Note the cost gate: list the generations and credit cost and wait for an OK first, and show screenshots before each expensive step.",
+              "label_zh": "踩坑",
+              "text_zh": "注意提示词里的成本闸门:先列出要生成什么、花多少额度,等确认;每个贵的步骤前先给截图。"
+            }
+          ]
+        },
+        {
+          "title_en": "Short film made through the Krea MCP in 10 minutes for $8",
+          "title_zh": "通过 Krea MCP 一次出片(10 分钟、$8)",
+          "author": "@angrypenguinPNG",
+          "author_url": "https://x.com/angrypenguinPNG",
+          "source_url": "https://x.com/angrypenguinPNG/status/2102829318875537683",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 has genuine creative taste. it one-shotted this video for $8 in 10 minutes using the Krea MCP\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 has genuine creative taste. it one-shotted this video for $8 in 10 minutes using the Krea MCP」。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About $8 and 10 minutes.",
+              "label_zh": "作者自述投入",
+              "text_zh": "约 $8、10 分钟。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 30 s, 1280x720.",
+              "label_zh": "成片规格",
+              "text_zh": "约 30 秒,1280x720。"
+            }
+          ]
+        },
+        {
+          "title_en": "Japanese vertical review short: Opus diagrams, TTS voice, Seedance 2.5 opening",
+          "title_zh": "日文竖屏评测短视频:Opus 图解动画 + TTS 配音 + Seedance 2.5 开场",
+          "author": "@masahirochaen",
+          "author_url": "https://x.com/masahirochaen",
+          "source_url": "https://x.com/masahirochaen/status/2103872865770836012",
+          "platform": "x",
+          "aspect_ratio": "9:16",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Japanese): diagram animation by Claude Opus 5.5, voice by Gemini 3.8 Flash TTS, opening face and voice by Seedance 2.5.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖(日语):图解动画是 Claude Opus 5.5,声音是 Gemini 3.8 Flash TTS,开头的脸和声音是 Seedance 2.5。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 57 s, 1080x1920.",
+              "label_zh": "成片规格",
+              "text_zh": "约 57 秒,1080x1920。"
+            }
+          ]
+        },
+        {
+          "title_en": "Eight-stage siege game in 2 hours, then a 60-second trailer from video models",
+          "title_zh": "2 小时做完 8 关攻城游戏 + 60 秒宣传片(Seedance 2.5 / MiniMax H3 + CapCut)",
+          "author": "@KanaWorks_AI",
+          "author_url": "https://x.com/KanaWorks_AI",
+          "source_url": "https://x.com/KanaWorks_AI/status/2102684116525437206",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Code: Claude Opus 5.5 Video: Seedance 2.5 & MInimax H3 @capcutapp_jp\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Code:Claude Opus 5.5 Video: Seedance 2.5 & MInimax H3 @capcutapp_jp」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 60 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 60 秒,1920x1080。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "music-video",
+      "name_en": "Music Video",
+      "name_zh": "MV",
+      "cases": [
+        {
+          "title_en": "\"Claude Pop\" music video: a dictated brief and a 12-hour autonomous run",
+          "title_zh": "「Claude Pop」过夜 12 小时 MV(语音口述长 brief,视频模型打底 + JS 重绘)",
+          "author": "@donaldjewkes",
+          "author_url": "https://x.com/donaldjewkes",
+          "source_url": "https://x.com/donaldjewkes/status/2102801274173587569",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "excerpt",
+          "prompt": "I've included an MP4 file and an original link to a video that is called \"Claude Pop.\" It's a pop song that is about increasing rate of progress and the experience of the singularity approaching.\nI want you to independently do an end-to-end complete pass on making an updated version of this video. …",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I made this with one prompt using Opus 5.5. I spoke to my computer for 5mins, claude worked for 12 hours\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I made this with one prompt using Opus 5.5. I spoke to my computer for 5mins, claude worked for 12 hours」。"
+            },
+            {
+              "label_en": "About the prompt",
+              "text_en": "Excerpt. The full brief is about 9,500 characters, in the post's replies; a full transcript is at claudevideo.org/videos/pixel-flower-illustrates-ai-time-horizon-progress-data. The \"……\" marks are cuts.",
+              "label_zh": "提示词说明",
+              "text_zh": "原文节选。全文约 9,500 字符,在原帖回复中;完整转录见 claudevideo.org/videos/pixel-flower-illustrates-ai-time-horizon-progress-data。「……」处为删节。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Five minutes of dictation became the brief; Opus read a local reference library and skills; generated character sheets and scenes through an image API; used Seedance 2.5 for base footage with people and physics, split by lyric with lip-sync attempts; ElevenLabs for sound effects; then redrew the whole film in JavaScript over the footage (\"shoot first, draw over\"), watching it repeatedly and critiquing screenshots.",
+              "label_zh": "工具链与做法",
+              "text_zh": "5 分钟语音口述成 brief;Opus 读本地参考库与 skills;通过图像 API 生成角色设定图和场景;用 Seedance 2.5 生成带人物与物理的底片,按歌词分段并尝试对口型;ElevenLabs 做音效;最后「先拍后描」,用 JS 动画在底片上整体重绘,多次通看、截图自评。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "A Max plan, a generation budget capped at about $2,000, and an ElevenLabs key; the brief told the agent to spend all available usage.",
+              "label_zh": "作者自述投入",
+              "text_zh": "Max 套餐、生成额度上限约 $2,000、ElevenLabs key;brief 里明说可以把额度用完。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 141.5 s, 1920x1080, about 3.91M views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 141.5 秒,1920x1080,约 391 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "\"One prompt\" here means a long brief plus a full environment. The brief has been copied widely; one analysis found 87% vocabulary overlap with another popular template.",
+              "label_zh": "踩坑",
+              "text_zh": "这里的「one prompt」= 长 brief + 完整环境。这份 brief 被大量复制,有统计测得它与另一份热门模板词汇重合 87%。"
+            }
+          ]
+        },
+        {
+          "title_en": "1990s demoscene demo in C/C++ and OpenGL, synced to an S3M track",
+          "title_zh": "90 年代 Demoscene(C/C++ + OpenGL,配 S3M 音轨,单提示词)",
+          "author": "@gandamu_ml",
+          "author_url": "https://x.com/gandamu_ml",
+          "source_url": "https://x.com/gandamu_ml/status/2102919394775220530",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "excerpt",
+          "prompt": "I would like you to create a kickass, impressive 1990s style demoscene demo using this S3M track as the music. Prior to getting to work, please see how to best play and analyze the S3M track. This will be important since synchronization of effects and appropriateness of scenes to the musical vibe …",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 just one-shot this 90s-style demoscene demo for me… genuine one-shot (in colloquial X post sense - single prompt)\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 just one-shot this 90s-style demoscene demo for me… genuine one-shot (in colloquial X post sense - single prompt)」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "C/C++ with OpenGL, analysing and playing the S3M module for sync; the clip is a screen recording.",
+              "label_zh": "工具链与做法",
+              "text_zh": "C/C++ + OpenGL,先分析并播放 S3M 模块再对齐效果;成片为录屏。"
+            },
+            {
+              "label_en": "Source material",
+              "text_en": "Music: \"Second Reality\" by Purple Motion (Future Crew), supplied by the creator; copyright belongs to its authors. Shown here only as the creator's own demo, via the original post.",
+              "label_zh": "素材出处",
+              "text_zh": "配乐:Purple Motion(Future Crew)《Second Reality》原曲,由作者提供,版权归原作者;本页仅链接原帖展示作者的作品。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 382.7 s (6.4 minutes), 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 382.7 秒(6.4 分钟),1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "\"I'm Upping My P(Doom)\" music video painted with p5.brush and parallel subagents",
+          "title_zh": "「I'm Upping My P(Doom)」MV(p5.js + p5.brush,并行子 agent)",
+          "author": "@other__reality",
+          "author_url": "https://x.com/other__reality",
+          "source_url": "https://x.com/other__reality/status/2102514581684052169",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Gave Claude Code the lyrics and the audio. Pass one (medium effort): use the Clawd character and give every lyric line an interesting visual and transition, with no scene ideas specified. Pass two (xhigh): switch to p5 brush strokes, make the scenes more interesting and have each scene flow into the next.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Claude Opus 5.5 has the best visual design of any model I have tested so far\"; repo README: first generation Claude Opus 5.5 (Medium), second generation Claude Opus 5.5.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Claude Opus 5.5 has the best visual design of any model I have tested so far」;仓库 README:第一版 Claude Opus 5.5(Medium),第二版 Claude Opus 5.5。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Opus wrote an ANIMATION_GUIDE.md for parallel subagents (reported as seven) and a STORYBOARD.md; nine chapters, one file each; studio.html draws with p5.js and p5.brush; render.mjs renders frames in headless Chrome and encodes with FFmpeg. All animation took about 45 minutes.",
+              "label_zh": "工具链与做法",
+              "text_zh": "Opus 自己写了给并行子 agent 用的 ANIMATION_GUIDE.md(转述为 7 个子 agent)和 STORYBOARD.md;9 个章节各一个文件;studio.html 用 p5.js + p5.brush 绘制;render.mjs 用无头 Chrome 逐帧 + FFmpeg 编码。全部动画约 45 分钟。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About 10% of a Max 5x weekly allowance (as relayed by a forum post).",
+              "label_zh": "作者自述投入",
+              "text_zh": "约耗 Max 5x 套餐周额度的 10%(论坛转述)。"
+            },
+            {
+              "label_en": "Source material",
+              "text_en": "Music: the song comes from a 2024 YouTube video and is not the creator's own (README: \"as far as I could find\"); copyright belongs to its original authors.",
+              "label_zh": "素材出处",
+              "text_zh": "配乐:歌曲来自 2024 年的一个 YouTube 视频,非作者原创(README 自述「as far as I could find」),版权归原作者。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "YouTube: youtu.be/8j-hR4fJywU. Code: github.com/JohnHeibel/PDoomVideo (no licence stated, link only). Starter template by the same author: github.com/JohnHeibel/ClaudeAnimationBase (MIT).",
+              "label_zh": "相关链接",
+              "text_zh": "YouTube:youtu.be/8j-hR4fJywU;代码:github.com/JohnHeibel/PDoomVideo(未声明许可证,只链接);同作者起步模板:github.com/JohnHeibel/ClaudeAnimationBase(MIT)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 156.6 s, 1920x1080, about 2.84M views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 156.6 秒,1920x1080,约 284 万浏览。"
+            }
+          ]
+        },
+        {
+          "title_en": "The same brief re-run with Midjourney and a moodboard",
+          "title_zh": "同一 brief + Midjourney + 情绪板重跑(本页浏览量最高)",
+          "author": "@anabology",
+          "author_url": "https://x.com/anabology",
+          "source_url": "https://x.com/anabology/status/2103534482930491441",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Re-ran @donaldjewkes' \"Claude Pop\" brief (see the card above) almost unchanged, giving Opus 5.5 access to Midjourney and a moodboard, and let it work for 12 hours.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Gave Opus 5.5 donald's prompt, Midjourney, and a moodboard 12 hours later, woke up to this\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Gave Opus 5.5 donald's prompt, Midjourney, and a moodboard 12 hours later, woke up to this」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 306 s, 1920x1080, about 19.75M views (the most viewed case here).",
+              "label_zh": "成片规格",
+              "text_zh": "约 306 秒,1920x1080,约 1,975 万浏览(本页最高)。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "The same brief with different reference material produced a completely different film.",
+              "label_zh": "踩坑",
+              "text_zh": "同一份 brief 换参考素材,得到完全不同的片子。"
+            }
+          ]
+        },
+        {
+          "title_en": "\"Stroke of a Pen\" Bitcoin music video storyboarded by an agent swarm",
+          "title_zh": "比特币货币史 MV「Stroke of a Pen」(agent 群分镜,约 75 个卡点镜头)",
+          "author": "@bradmillscan",
+          "author_url": "https://x.com/bradmillscan",
+          "source_url": "https://x.com/bradmillscan/status/2103108967194833310",
+          "platform": "x",
+          "aspect_ratio": "9:16",
+          "prompt_type": "summary",
+          "prompt": "Told Opus 5.5 to read the creator's Bitcoin and monetary-history wikis and make a music video with code only; the song was generated separately. Two revision rounds followed: the first because the characters looked like crude stick figures, the second to add Matrix-style code elements.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I told Opus 5.5 to read my Bitcoin & monetary-history wikis & make a music video with code only\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I told Opus 5.5 to read my Bitcoin & monetary-history wikis & make a music video with code only」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Song generated with ElevenLabs; a swarm of agents storyboarded and coded about 75 shots on the beat for a 3 min 23 s vertical video. In round one it rewrote the skeletal rig.",
+              "label_zh": "工具链与做法",
+              "text_zh": "歌曲用 ElevenLabs 生成;一群 agent 分镜并写代码,3 分 23 秒竖屏、约 75 个卡拍镜头;第一轮修改时它重写了骨骼绑定。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 202.7 s, 1080x1920, about 190K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 202.7 秒,1080x1920,约 19 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Character animation is a weak spot of code animation and needs its own iteration on the rig.",
+              "label_zh": "踩坑",
+              "text_zh": "人物动画是代码动画的弱项,需要专门迭代骨骼。"
+            }
+          ]
+        },
+        {
+          "title_en": "Mid-Autumn paper-collage short: p5.brush frames over generated backdrops",
+          "title_zh": "中秋剪纸拼贴短片(p5.brush 逐帧 + Nano Banana Pro 出底稿)",
+          "author": "@ring_hyacinth",
+          "author_url": "https://x.com/ring_hyacinth",
+          "source_url": "https://x.com/ring_hyacinth/status/2102986085328716066",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): \"a small animation made with Opus 5.5\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「用 Opus 5.5 制作的小动画」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 40 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 40 秒,1920x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Person on script and music, model on animation: a steady split of work.",
+              "label_zh": "踩坑",
+              "text_zh": "人负责脚本与音乐、模型负责动画,是比较稳的分工。"
+            }
+          ]
+        },
+        {
+          "title_en": "Suno-sung song with lyrics and MV by Opus 5.5 (Bilibili)",
+          "title_zh": "Suno 编曲演唱 + Opus 5.5 作词并做 MV(B 站)",
+          "author": "syline",
+          "author_url": null,
+          "source_url": "https://www.bilibili.com/video/BV1qihf6rE6f/",
+          "platform": "bilibili",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Bilibili title: \"Suno arrangement and vocals, Opus 5.5 lyrics, then the MV it made\" (Chinese).",
+              "label_zh": "模型依据",
+              "text_zh": "B 站标题「suno编曲和演唱,opus5.5作词然后制作的mv」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "162 s, 1920x1080 (about 3K plays; thin evidence).",
+              "label_zh": "成片规格",
+              "text_zh": "162 秒,1920x1080(约 3K 播放,证据较弱)。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "short-film",
+      "name_en": "Narrative & History Short",
+      "name_zh": "叙事与历史短片",
+      "cases": [
+        {
+          "title_en": "Two-minute sand animation of 250 years of U.S. history",
+          "title_zh": "美国 250 年历史沙画动画(一句话,含配乐音效)",
+          "author": "@Michaelzsguo",
+          "author_url": "https://x.com/Michaelzsguo",
+          "source_url": "https://x.com/Michaelzsguo/status/2102592355165782312",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "Make a 2-minute sand animation that tells the story of 250 years of U.S. history. Keep it lively, engaging, and tasteful. Add appropriate background music and sound design.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): Opus 5.5, one prompt from start to finish with no edits.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5,太牛逼了… 一个 prompt 到底,没有任何修改」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "120 s, 1920x1080, about 76K views.",
+              "label_zh": "成片规格",
+              "text_zh": "120 秒,1920x1080,约 7.6 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "The author stresses that neither Blender nor Three.js was used.",
+              "label_zh": "踩坑",
+              "text_zh": "作者强调没用 Blender、没用 Three.js。"
+            }
+          ]
+        },
+        {
+          "title_en": "Pelican riding a bicycle, theatrical cut with a custom GPU ray-marcher",
+          "title_zh": "「鹈鹕骑自行车」剧场版(自写 GPU 光线步进渲染器)",
+          "author": "@AxtonLiu",
+          "author_url": "https://x.com/AxtonLiu",
+          "source_url": "https://x.com/AxtonLiu/status/2103119648271290566",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "每次一个新的模型出来呢，大家都让它去画 \"鹈鹕骑自行车\" 来判断这个模型的空间能力，基本上都是用 HTML、SVG 来画动画。当我实在看得都有审美疲劳了，我希望你能画一个最复杂、最精细、最精美的 \"鹈鹕骑自行车\"的动画视频，你可以用任何的技术，不用着急，画一天都可以。",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): Opus 5.5, \"Pelican riding a bicycle\" theatrical cut, generated from one prompt.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 《鹈鹕骑自行车》剧场版:提示词一次生成」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "No 3D models, textures or audio assets: Opus wrote its own GPU ray-marcher, and the pelican, bicycle, pier, sea, sky and score are all computed in code; 1,140 frames at 40 samples per frame.",
+              "label_zh": "工具链与做法",
+              "text_zh": "没用任何 3D 模型、贴图、音频素材;Opus 自己写了 GPU 光线步进渲染器,鹈鹕、自行车、栈桥、海面、天空、配乐都由代码计算;1,140 帧,每帧 40 次采样。"
+            },
+            {
+              "label_en": "About the prompt",
+              "text_en": "The original uses full-width Chinese quotation marks around the title; they are shown as straight quotes here. Wording unchanged.",
+              "label_zh": "提示词说明",
+              "text_zh": "原提示词中的引号为中文全角引号,此处显示为半角,内容未改。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "38 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "38 秒,1920x1080。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Give it a generous time budget (\"take a whole day if you need\").",
+              "label_zh": "踩坑",
+              "text_zh": "时间预算要放宽(原文:「不用着急,画一天都可以」)。"
+            }
+          ]
+        },
+        {
+          "title_en": "Tengwang Pavilion on Mid-Autumn night, one WebGL2 shader (topic chosen by the model)",
+          "title_zh": "滕王阁·中秋夜(自由选题,WebGL2 逐像素 + Karplus-Strong 古筝)",
+          "author": "@DemitiyaGeekzen",
+          "author_url": "https://x.com/DemitiyaGeekzen",
+          "source_url": "https://x.com/DemitiyaGeekzen/status/2103517910274818523",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "用你最强的思维和能力，根据对我的了解，自行寻找我可能喜欢的主题，制作一个30s的视频还有互动html，尽可能的展示你的前端能力！",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): Opus 5.5 is strong; I let it pick its own topic for an interactive page and a video.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「opus5.5有点强,我让它自由选题做交互页面和视频」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "As the model described it: one WebGL2 shader computes every pixel with no images; sun and moon paths from Nanchang's latitude; the pavilion facade in Canvas 2D; all sound synthesised live in Web Audio, the guzheng via a Karplus-Strong string model; also delivered an interactive page (scrub the timeline, float lanterns, record video in-page).",
+              "label_zh": "工具链与做法",
+              "text_zh": "作者转述模型说明:画面由一个 WebGL2 着色器逐像素算出,没用图片;按南昌纬度推算日月轨迹;Canvas 2D 画滕王阁立面;声音全用 Web Audio 实时合成,古筝用 Karplus-Strong 弦振动模型;同时交付可交互网页(可拖时间轴、放河灯、网页内录制视频)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "30 s, 1920x1080 (low reach, about 500 views).",
+              "label_zh": "成片规格",
+              "text_zh": "30 秒,1920x1080(浏览量很低,约 500)。"
+            }
+          ]
+        },
+        {
+          "title_en": "Porco Rosso-style sunset dogfight recreated in Three.js, from one line",
+          "title_zh": "用 Web3D 复刻《红猪》日落空战(一句话)",
+          "author": "@NFT_Chen",
+          "author_url": "https://x.com/NFT_Chen",
+          "source_url": "https://x.com/NFT_Chen/status/2103401780117938683",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "用 web3D 复刻宫崎骏《红猪》日落海面上的经典空战：白绿红涂装战斗机、紫色积云、海面反光、吉卜力运镜，画面写 just breathe.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): Opus 5.5 used Three.js to recreate the classic dogfight from Hayao Miyazaki's Porco Rosso. The author says this one line was the whole prompt.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 用 Three.js 把宫崎骏《红猪》经典空战复刻出来了」;作者称只给了这一句。"
+            },
+            {
+              "label_en": "Source material",
+              "text_en": "Homage: Porco Rosso, Hayao Miyazaki / Studio Ghibli. The film and its designs belong to their rights holders; shown here only as the creator's fan recreation, via the original post.",
+              "label_zh": "素材出处",
+              "text_zh": "致敬作品:《红猪》,宫崎骏 / 吉卜力工作室;原作及其设计版权归权利方所有,本页仅链接原帖展示作者的致敬创作。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Repost with the video: x.com/NFT_Chen/status/2103882415299350878 (about 14 s).",
+              "label_zh": "相关链接",
+              "text_zh": "带视频的转发:x.com/NFT_Chen/status/2103882415299350878(约 14 秒)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 51K views on the original post.",
+              "label_zh": "成片规格",
+              "text_zh": "原帖约 5.1 万浏览。"
+            }
+          ]
+        },
+        {
+          "title_en": "Austerlitz, 2 December 1805: a five-minute film made entirely in code",
+          "title_zh": "奥斯特里茨战役 5 分钟历史片(WebGL2,真实地形与日出方位)",
+          "author": "@WinterArc2125",
+          "author_url": "https://x.com/WinterArc2125",
+          "source_url": "https://x.com/WinterArc2125/status/2103116235009347650",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"OPUS 5.5 IS CRAZY… I just had it turn that morning into a complete 5 minute film. All code.\"",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「OPUS 5.5 IS CRAZY… I just had it turn that morning into a complete 5 minute film. All code.」"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "90 minutes to set up, 4 hours to render, about $40 of cloud-agent credit.",
+              "label_zh": "作者自述投入",
+              "text_zh": "搭建 90 分钟、渲染 4 小时、云端 agent 额度约 $40。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Code: github.com/WinterArc21/Battle-of-Austerlitz-Film (no licence stated, link only).",
+              "label_zh": "相关链接",
+              "text_zh": "代码:github.com/WinterArc21/Battle-of-Austerlitz-Film(未声明许可证,只链接)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 301 s, 1920x1080, 24fps, about 640K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 301 秒,1920x1080,24fps,约 64 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Long films need layers: narration beats, then shot timing, then sound derived from the picture.",
+              "label_zh": "踩坑",
+              "text_zh": "长片要工程化分层:旁白节拍 → 镜头计时 → 声音从画面推导。"
+            }
+          ]
+        },
+        {
+          "title_en": "Low-poly 3D retelling of \"The Taoist of Laoshan\"",
+          "title_zh": "《崂山道士》3D 讲解片(不写分镜,声音克隆旁白)",
+          "author": "@wshuyi",
+          "author_url": "https://x.com/wshuyi",
+          "source_url": "https://x.com/wshuyi/status/2103308292613345504",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): Opus 5.5 made the 3D film directly; this time run in Claude Code with Opus 5.5.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 直出《崂山道士》3D 影片… 这次用 Claude Code 挂 Opus 5.5」。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Earlier film by the same author, \"The Feast at Hong Gate\": x.com/wshuyi/status/2103101793584796090",
+              "label_zh": "相关链接",
+              "text_zh": "同作者前作《鸿门宴》:x.com/wshuyi/status/2103101793584796090"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 359 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 359 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "\"Slumped on a bench, watching the blast\" meme turned into a shader animation (Bilibili)",
+          "title_zh": "「瘫坐长椅看原子弹爆炸」动画(B 站,跑 16 小时、每个画面一个着色器)",
+          "author": "一起Vibe",
+          "author_url": null,
+          "source_url": "https://www.bilibili.com/video/BV1jyaA6QEoH/",
+          "platform": "bilibili",
+          "aspect_ratio": "3:4",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Bilibili title: \"Opus 5.5 turned … into an animation\" (Chinese).",
+              "label_zh": "模型依据",
+              "text_zh": "B 站标题「Opus 5.5 把…做成了动画」。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About 40% of a 20x plan's weekly allowance.",
+              "label_zh": "作者自述投入",
+              "text_zh": "用掉 20x 套餐周额度的 40%。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "42 s, 1080x1440, about 170K plays.",
+              "label_zh": "成片规格",
+              "text_zh": "42 秒,1080x1440,约 17 万播放。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "3d-blender",
+      "name_en": "3D, Blender & Shader",
+      "name_zh": "3D、Blender 与着色器",
+      "cases": [
+        {
+          "title_en": "Market Street, San Francisco, the afternoon before the 1906 earthquake, in Blender",
+          "title_zh": "1906 年地震前的旧金山市场街(Blender Python,先建史料表再建模)",
+          "author": "@alexalbert__",
+          "author_url": "https://x.com/alexalbert__",
+          "source_url": "https://x.com/alexalbert__/status/2102466523164274839",
+          "platform": "x",
+          "aspect_ratio": "7:5",
+          "prompt_type": "excerpt",
+          "prompt": "Recreate Market Street, San Francisco as it stood on April 17, 1906, the afternoon before the earthquake, in Blender.\nScope: the Ferry Building up Market to Fifth Street, including the Palace Hotel, the Call Building, the Chronicle Building, Lotta's Fountain and the Emporium.\nBefore modeling …",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I've been on a Blender kick with Opus 5.5. Its better 3D modeling and vision mean you can build an entire world from a single prompt.\"",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I've been on a Blender kick with Opus 5.5. Its better 3D modeling and vision mean you can build an entire world from a single prompt.」"
+            },
+            {
+              "label_en": "Who posted it",
+              "text_en": "Posted by an Anthropic employee.",
+              "label_zh": "发布方",
+              "text_zh": "发布者为 Anthropic 员工。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 8 s, 960x680, about 160K views.",
+              "label_zh": "成片规格",
+              "text_zh": "约 8 秒,960x680,约 16 万浏览。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Needs local Blender with Python and web access. The pattern to copy: build a sourced data file first, then reusable generators, so every building traces back to data.",
+              "label_zh": "踩坑",
+              "text_zh": "需要本地 Blender + Python 与联网检索。值得照抄的范式:先建带出处的数据源文件,再写可复用生成器,每栋楼都能追溯到数据。"
+            }
+          ]
+        },
+        {
+          "title_en": "Same procedural Blender shot: Opus 5.5 vs GPT-6 Astra",
+          "title_zh": "Blender 程序化 10 秒镜头:Opus 5.5 vs GPT-6 Astra 对比",
+          "author": "@Stefan_3D_AI",
+          "author_url": "https://x.com/Stefan_3D_AI",
+          "source_url": "https://x.com/Stefan_3D_AI/status/2102471841046786153",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "One prompt given to both Opus 5.5 and GPT-6 Astra: build a 10-second shot in Blender only, fully procedural, render it, and record a timelapse of the build.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"First Opus 5.5 vs GPT-6 Astra test is 3D\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「First Opus 5.5 vs GPT-6 Astra test is 3D」。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "Opus 5.5: 35 minutes, 199.6K output tokens, about $13.3. GPT-6 Astra: 28 minutes, 56.6K output tokens, about $14.5 (author's figures).",
+              "label_zh": "作者自述投入",
+              "text_zh": "Opus 5.5:35 分钟、19.96 万输出 token、约 $13.3;GPT-6 Astra:28 分钟、5.66 万输出 token、约 $14.5(作者自述)。"
+            },
+            {
+              "label_en": "Pitfalls",
+              "text_en": "Opus 5.5 writes many more output tokens at a lower unit price; budget for output.",
+              "label_zh": "踩坑",
+              "text_zh": "Opus 5.5 输出 token 多、单价低,预算要按输出算。"
+            }
+          ]
+        },
+        {
+          "title_en": "Octopus modelled, textured, rigged and animated in Blender in about 2 hours (YouTube)",
+          "title_zh": "Blender 里约 2 小时从零做章鱼(建模、贴图、绑定、动画,YouTube)",
+          "author": "Bad Decisions Studio",
+          "author_url": null,
+          "source_url": "https://www.youtube.com/watch?v=6ZHZ9aCZIR4",
+          "platform": "youtube",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Asked Opus 5.5 to model, texture, rig and animate an octopus in Blender from scratch; it took about two hours. The video compares the result with GPT-6 Astra.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Video description: \"Claude Opus 5.5 just dropped… It modelled, textured, rigged and animated an octopus in Blender from scratch in about two hours\".",
+              "label_zh": "模型依据",
+              "text_zh": "视频简介:「Claude Opus 5.5 just dropped… It modelled, textured, rigged and animated an octopus in Blender from scratch in about two hours」。"
+            },
+            {
+              "label_en": "About the prompt",
+              "text_en": "The prompt is shown in the video and was not transcribed word for word; this card summarises it.",
+              "label_zh": "提示词说明",
+              "text_zh": "提示词在视频里,未逐字转录,此处为概括。"
+            }
+          ]
+        },
+        {
+          "title_en": "GPU fluid-simulated campfire film in JavaScript, self-critiqued about 40 times",
+          "title_zh": "只用 JavaScript 的 GPU 流体火焰短片(自评约 40 轮)",
+          "author": "@NathanWilbanks_",
+          "author_url": "https://x.com/NathanWilbanks_",
+          "source_url": "https://x.com/NathanWilbanks_/status/2103881538592981110",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Asked Opus 5.5 for the most realistic fire it could build using only JavaScript, then had a vision model critique each rendered frame like a VFX supervisor, fixed the issues and repeated, about 40 rounds, before rendering a scripted shot offline frame by frame.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I asked opus 5.5 in @agnt_gg for the most realistic fire it could build using ONLY javascript\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I asked opus 5.5 in @agnt_gg for the most realistic fire it could build using ONLY javascript」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "A 3D fluid simulation on the GPU with flame colour from blackbody radiation; the review loop caught the fire dying out, ring artefacts on the ground and embers that looked like cheese slices; sound driven by per-frame flame brightness; one HTML file, one conversation.",
+              "label_zh": "工具链与做法",
+              "text_zh": "GPU 上的 3D 流体模拟,火焰颜色来自黑体辐射;评审循环抓出了火焰熄灭、地面环形伪影、炭块像奶酪片等问题;声音由每帧火焰亮度驱动;单 HTML、一次对话。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "38 s, 1920x1080 (low reach, about 1K views).",
+              "label_zh": "成片规格",
+              "text_zh": "38 秒,1920x1080(浏览量很低,约 1K)。"
+            }
+          ]
+        },
+        {
+          "title_en": "Hand-scribbled \"Opus5\" turned into a 3D boxing animation, packaged as a skill",
+          "title_zh": "「Opus5」随手涂鸦变 3D 拳击动画,并封装成 Skill",
+          "author": "@MinLiBuilds",
+          "author_url": "https://x.com/MinLiBuilds",
+          "source_url": "https://x.com/MinLiBuilds/status/2102756822990180387",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): when Opus 5.5 finished this animation, I literally stood up.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus5.5做好这个动画后,我直接站起来了」。"
+            },
+            {
+              "label_en": "Source material",
+              "text_en": "The animation depicts real public figures (labelled Dario Amodei and Sam Altman) in a boxing match. It is the creator's own work, shown here via the original post.",
+              "label_zh": "素材出处",
+              "text_zh": "画面含真人形象(标注为 Dario Amodei 与 Sam Altman)的拳击对打,仅为原作者的创作展示,本页只链接原帖。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Skill: github.com/limin112/min-skill (no licence stated, link only).",
+              "label_zh": "相关链接",
+              "text_zh": "Skill:github.com/limin112/min-skill(未声明许可证,只链接)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 103 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 103 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "Windmill modelled, rigged, textured and animated in Blender via MCP in 15 minutes",
+          "title_zh": "风车建模-绑定-贴图-动画全流程(Blender + Higgsfield MCP,15 分钟)",
+          "author": "Higgsfield",
+          "author_url": "https://x.com/higgsfield_ai",
+          "source_url": "https://x.com/higgsfield_ai/status/2102453658889953717",
+          "platform": "x",
+          "aspect_ratio": "9:16",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Claude Opus 5.5 + Higgsfiled built this animated windmill in Blender in 15 minutes\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Claude Opus 5.5 + Higgsfiled built this animated windmill in Blender in 15 minutes」。"
+            },
+            {
+              "label_en": "Who posted it",
+              "text_en": "The vendor's own promotional post.",
+              "label_zh": "发布方",
+              "text_zh": "厂商自家的宣传帖。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Longer tutorial: YouTube, \"Claude Opus 5.5 + Blender: The Ultimate 3D AI Pipeline (Higgsfield)\", youtube.com/watch?v=Xeq-BwMVBUA (Aaron Randall).",
+              "label_zh": "相关链接",
+              "text_zh": "相关长教程:YouTube「Claude Opus 5.5 + Blender: The Ultimate 3D AI Pipeline (Higgsfield)」youtube.com/watch?v=Xeq-BwMVBUA(Aaron Randall)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 21 s, 1080x1920.",
+              "label_zh": "成片规格",
+              "text_zh": "约 21 秒,1080x1920。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "category": "video-editing",
+      "name_en": "Editing & Post-Production",
+      "name_zh": "剪辑与后期",
+      "cases": [
+        {
+          "title_en": "Raw talking-head clip cut into a punchy captioned edit",
+          "title_zh": "口播原片剪成带字幕、图形、音乐的快节奏短视频(OpenEdit)",
+          "author": "@sab8a",
+          "author_url": "https://x.com/sab8a",
+          "source_url": "https://x.com/sab8a/status/2103144778481475686",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "full",
+          "prompt": "Cut a raw talking-head clip into a punchy, fun edit with subtitles, graphics and music",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 + OpenEdit\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 + OpenEdit」。"
+            },
+            {
+              "label_en": "Reported cost",
+              "text_en": "About 1 h 51 min; about $23 of tokens plus about $49 of generation-API usage.",
+              "label_zh": "作者自述投入",
+              "text_zh": "约 1 小时 51 分;token 约 $23,另有生成类 API 用量约 $49。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 37 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 37 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "Opus 5.5 driving After Effects to post-process generated clips (two tests)",
+          "title_zh": "让 Opus 5.5 操作 After Effects 加工 AI 视频(两次测试)",
+          "author": "@aicreataro",
+          "author_url": "https://x.com/aicreataro",
+          "source_url": "https://x.com/aicreataro/status/2103757144789221819",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "summary",
+          "prompt": "Test 1: gave Opus 5.5 a 15-second clip generated by MiniMax H3 and had it drive After Effects to retime the cuts to the beat and add one effect per section (particles, light rays, kaleidoscope, datamosh). Test 3: Suno wrote the track, MiniMax H3 made a character dance to it, and Opus extracted full-body skeleton data frame by frame from the dance and fed it into After Effects to drive text, light and camera.",
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Japanese): had Opus 5.5 operate After Effects.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖(日语):「Opus 5.5にAfter Effectsを操作させて」。"
+            },
+            {
+              "label_en": "Toolchain",
+              "text_en": "Author's conclusions: rough instructions still give decent results, and the output is saved as an .aep project a person can edit afterwards; skeleton data removes manual tracking, but deciding when to show the tracked effect still takes a human.",
+              "label_zh": "工具链与做法",
+              "text_zh": "作者结论:指令很粗也能做得不错,成果存成 .aep 工程、事后可以人工修改;能取到骨骼就不用手动跟踪,但何时显示跟踪效果还得人来判断。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Test 1: x.com/aicreataro/status/2102656273112326609 (15 s, 1440x1280).",
+              "label_zh": "相关链接",
+              "text_zh": "测试 1:x.com/aicreataro/status/2102656273112326609(15 秒,1440x1280)。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "Test 3: about 32 s, 1920x1080, about 380K views.",
+              "label_zh": "成片规格",
+              "text_zh": "测试 3:约 32 秒,1920x1080,约 38 万浏览。"
+            }
+          ]
+        },
+        {
+          "title_en": "A full YouTube video edited by Opus 5.5 through a DaVinci Resolve MCP",
+          "title_zh": "让 Opus 5.5 通过 MCP 驱动 DaVinci Resolve 剪完整条 YouTube 视频",
+          "author": "@NickSpisak_",
+          "author_url": "https://x.com/NickSpisak_",
+          "source_url": "https://x.com/NickSpisak_/status/2103511092043628807",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Claude Opus 5.5 edited my entire YouTube video\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Claude Opus 5.5 edited my entire YouTube video」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 539 s (9 minutes), 3840x2160.",
+              "label_zh": "成片规格",
+              "text_zh": "约 539 秒(9 分钟),3840x2160。"
+            }
+          ]
+        },
+        {
+          "title_en": "Grok-generated dance clip recut and packaged by Opus 5.5",
+          "title_zh": "Grok 生成的原始舞蹈片段 → Opus 5.5 剪辑包装",
+          "author": "@Gorden_Sun",
+          "author_url": "https://x.com/Gorden_Sun",
+          "source_url": "https://x.com/Gorden_Sun/status/2104009748874141941",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post (Chinese): video 1 is the Opus 5.5 edit, video 2 is the raw Grok output.",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「视频1:Opus 5.5剪辑后的视频 视频2:Grok生成的原始视频」。"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "Two clips of about 15 s each (1920x1080 and 960x960).",
+              "label_zh": "成片规格",
+              "text_zh": "两段各约 15 秒(1920x1080 与 960x960)。"
+            }
+          ]
+        },
+        {
+          "title_en": "Opus played its own game and cut the best moments into a demo reel",
+          "title_zh": "游戏试玩演示片:Opus 自己玩游戏、挑高光、剪辑成片",
+          "author": "@rehan_shei",
+          "author_url": "https://x.com/rehan_shei",
+          "source_url": "https://x.com/rehan_shei/status/2103755997533839416",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"I turned this into a full game with unity cli + opus 5.5, also opus did this full demo video, it played the game with multiple characters and spliced together the best bits\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「I turned this into a full game with unity cli + opus 5.5, also opus did this full demo video, it played the game with multiple characters and spliced together the best bits」。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Playable: rehan-remade.github.io/hollow-crown/",
+              "label_zh": "相关链接",
+              "text_zh": "可玩:rehan-remade.github.io/hollow-crown/"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 29.7 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 29.7 秒,1920x1080。"
+            }
+          ]
+        },
+        {
+          "title_en": "Demo reel for a 110K-rigid-body WebGPU physics solver",
+          "title_zh": "11 万刚体 WebGPU 物理演示的宣传短片(一条提示词剪出)",
+          "author": "@nybobs",
+          "author_url": "https://x.com/nybobs",
+          "source_url": "https://x.com/nybobs/status/2103385835328680050",
+          "platform": "x",
+          "aspect_ratio": "16:9",
+          "prompt_type": "none",
+          "prompt": null,
+          "notes": [
+            {
+              "label_en": "Model",
+              "text_en": "Post: \"Opus 5.5 even put together this whole demo reel video just from a single text prompt in Claude Code\".",
+              "label_zh": "模型依据",
+              "text_zh": "原帖:「Opus 5.5 even put together this whole demo reel video just from a single text prompt in Claude Code」。"
+            },
+            {
+              "label_en": "Links",
+              "text_en": "Code (MIT): github.com/sbobyn/three-avbd. Live: three-avbd.vercel.app",
+              "label_zh": "相关链接",
+              "text_zh": "代码(MIT):github.com/sbobyn/three-avbd;在线:three-avbd.vercel.app"
+            },
+            {
+              "label_en": "Clip",
+              "text_en": "About 26 s, 1920x1080.",
+              "label_zh": "成片规格",
+              "text_zh": "约 26 秒,1920x1080。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
